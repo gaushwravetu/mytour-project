@@ -1,0 +1,5 @@
+1. Initially, i used git bash for the creation of related files inside the project.
+	i) here i have created a vitual environment(env) from git shell for the installing of all the required packages on further 	proceding of the project.
+	
+	ii) before installing the required packages i'll have to activate Script(source env/Scripts/activate),
+	now (pip freeze: it will show installed packages.), (first package: pip install django==3.0.7)
