@@ -3,3 +3,15 @@
 	
 	ii) before installing the required packages i'll have to activate Script(source env/Scripts/activate),
 	now (pip freeze: it will show installed packages.), (first package: pip install django==3.0.7)
+
+2. Initiate a git repository to update and track records of all the codes changes. But I don't want to push all the files on github(like media files, user authentication credentials, keys etc). So, created .gitignore file in the main path of the project. Go to 
+gitignore.io and search for django, copy all the contents and paste it into the .gitignore file.
+	i) for example if i don't want to push media, then paste the loction of media folder here: # pytype static type analyzer
+	available in .gitignore file.
+
+3. Now i have to make a folder called static to store all the files realted to the project.
+	i) In settings.py file of mytour app: manually add path of the static files as: STATIC_ROOT = os.path.join(BASE_DIR,'static')
+		STATICFILES_DIR = [
+    		os.path.join(BASE_DIR,'mytour/static'),
+		]
+	ii) Now my task is to check the status of the static files as : python manage.py collectstatic, it will also create a seperate 		static files with "admin" support.
