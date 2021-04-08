@@ -1,1 +1,464 @@
-<h2>places</h2>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Our Places</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Places</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Featured car start -->
+<div class="featured-car content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tour-box-3">
+                            <div class="tour-thumbnail">
+                                <a href="car-details.html" class="tour-img">
+                                    <div class="tag-2 bg-active">Featured</div>
+                                    <img class="d-block w-100" src="{% static 'img/mytour/mytour-2.jpg' %}" alt="car">
+                                </a>
+                                <div class="carbox-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="car-magnify-gallery">
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-3.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-3.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-4.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-4.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-5.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-5.jpg' %}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="car-details.html">place 1</a>
+                                </h1>
+                                <div class="location">
+                                    <a href="car-details.html">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </a>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                    <li>feature 1</li>
+                                    <li>feature 2</li>
+                                    <li>feature 3</li>
+                                    <li>feature 4</li>
+                                    <li>feature 5</li>
+                                    <li>feature 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tour-box-3">
+                            <div class="tour-thumbnail">
+                                <a href="car-details.html" class="tour-img">
+                                    <div class="tag-2 bg-active">Featured</div>
+                                    <img class="d-block w-100" src="{% static 'img/mytour/mytour-2.jpg' %}" alt="car">
+                                </a>
+                                <div class="carbox-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="car-magnify-gallery">
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-3.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-3.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-4.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-4.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-5.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-5.jpg' %}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="car-details.html">place 1</a>
+                                </h1>
+                                <div class="location">
+                                    <a href="car-details.html">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </a>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                    <li>feature 1</li>
+                                    <li>feature 2</li>
+                                    <li>feature 3</li>
+                                    <li>feature 4</li>
+                                    <li>feature 5</li>
+                                    <li>feature 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tour-box-3">
+                            <div class="tour-thumbnail">
+                                <a href="car-details.html" class="tour-img">
+                                    <div class="tag-2 bg-active">Featured</div>
+                                    <img class="d-block w-100" src="{% static 'img/mytour/mytour-2.jpg' %}" alt="car">
+                                </a>
+                                <div class="carbox-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="car-magnify-gallery">
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-3.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-3.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-4.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-4.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-5.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-5.jpg' %}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="car-details.html">place 1</a>
+                                </h1>
+                                <div class="location">
+                                    <a href="car-details.html">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </a>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                    <li>feature 1</li>
+                                    <li>feature 2</li>
+                                    <li>feature 3</li>
+                                    <li>feature 4</li>
+                                    <li>feature 5</li>
+                                    <li>feature 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tour-box-3">
+                            <div class="tour-thumbnail">
+                                <a href="car-details.html" class="tour-img">
+                                    <div class="tag-2 bg-active">Featured</div>
+                                    <img class="d-block w-100" src="{% static 'img/mytour/mytour-2.jpg' %}" alt="car">
+                                </a>
+                                <div class="carbox-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="car-magnify-gallery">
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-3.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-3.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-4.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-4.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-5.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-5.jpg' %}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="car-details.html">place 1</a>
+                                </h1>
+                                <div class="location">
+                                    <a href="car-details.html">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </a>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                    <li>feature 1</li>
+                                    <li>feature 2</li>
+                                    <li>feature 3</li>
+                                    <li>feature 4</li>
+                                    <li>feature 5</li>
+                                    <li>feature 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tour-box-3">
+                            <div class="tour-thumbnail">
+                                <a href="car-details.html" class="tour-img">
+                                    <div class="tag">Recommended</div>
+                                    <img class="d-block w-100" src="{% static 'img/mytour/mytour-2.jpg' %}" alt="car">
+                                </a>
+                                <div class="carbox-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="car-magnify-gallery">
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-3.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-3.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-4.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-4.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-5.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-5.jpg' %}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="car-details.html">place 1</a>
+                                </h1>
+                                <div class="location">
+                                    <a href="car-details.html">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </a>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                    <li>feature 1</li>
+                                    <li>feature 2</li>
+                                    <li>feature 3</li>
+                                    <li>feature 4</li>
+                                    <li>feature 5</li>
+                                    <li>feature 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tour-box-3">
+                            <div class="tour-thumbnail">
+                                <a href="car-details.html" class="tour-img">
+                                    <div class="tag">Recommended</div>
+                                    <img class="d-block w-100" src="{% static 'img/mytour/mytour-2.jpg' %}" alt="car">
+                                </a>
+                                <div class="carbox-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="car-magnify-gallery">
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-3.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-3.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-4.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-4.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-5.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-5.jpg' %}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="car-details.html">place 1</a>
+                                </h1>
+                                <div class="location">
+                                    <a href="car-details.html">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </a>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                    <li>feature 1</li>
+                                    <li>feature 2</li>
+                                    <li>feature 3</li>
+                                    <li>feature 4</li>
+                                    <li>feature 5</li>
+                                    <li>feature 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tour-box-3">
+                            <div class="tour-thumbnail">
+                                <a href="car-details.html" class="tour-img">
+                                    <div class="tag">Recommended</div>
+                                    <img class="d-block w-100" src="{% static 'img/mytour/mytour-2.jpg' %}" alt="car">
+                                </a>
+                                <div class="carbox-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="car-magnify-gallery">
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-3.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-3.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-4.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-4.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-5.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-5.jpg' %}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="car-details.html">place 1</a>
+                                </h1>
+                                <div class="location">
+                                    <a href="car-details.html">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </a>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                    <li>feature 1</li>
+                                    <li>feature 2</li>
+                                    <li>feature 3</li>
+                                    <li>feature 4</li>
+                                    <li>feature 5</li>
+                                    <li>feature 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="tour-box-3">
+                            <div class="tour-thumbnail">
+                                <a href="car-details.html" class="tour-img">
+                                    <div class="tag">Recommended</div>
+                                    <img class="d-block w-100" src="{% static 'img/mytour/mytour-2.jpg' %}" alt="car">
+                                </a>
+                                <div class="carbox-overlap-wrapper">
+                                    <div class="overlap-box">
+                                        <div class="overlap-btns-area">
+                                            <div class="car-magnify-gallery">
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="overlap-btn">
+                                                    <i class="fa fa-expand"></i>
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-2.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-2.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-3.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-3.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-4.jpg' %}" class="hidden">
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-4.jpg' %}">
+                                                </a>
+                                                <a href="{% static 'img/mytour/mytour-5.jpg' %}" class="hidden" >
+                                                    <img class="hidden" src="{% static 'img/mytour/mytour-5.jpg' %}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <h1 class="title">
+                                    <a href="car-details.html">place 1</a>
+                                </h1>
+                                <div class="location">
+                                    <a href="car-details.html">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </a>
+                                </div>
+                                <ul class="facilities-list clearfix">
+                                    <li>feature 1</li>
+                                    <li>feature 2</li>
+                                    <li>feature 3</li>
+                                    <li>feature 4</li>
+                                    <li>feature 5</li>
+                                    <li>feature 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Page navigation start -->
+                <div class="pagination-box p-box-2 text-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
+                            </li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Featured car end -->
+
+{%endblock content%}

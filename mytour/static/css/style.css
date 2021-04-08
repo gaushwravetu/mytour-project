@@ -3342,6 +3342,10 @@ input[type=checkbox]:checked + label:before {
     background: #dc4e41!important;
 }
 
+.team-1 .linkedin-bg:hover {
+    background: #066e90!important;
+}
+
 .our-team-2{
     background: rgba(0, 0, 0, 0.04) url(../img/bg-img-6.jpg) top left repeat;
     background-size: cover;
@@ -3444,6 +3448,10 @@ input[type=checkbox]:checked + label:before {
 
 .team-2 .google-bg:hover {
     background: #dc4e41!important;
+}
+
+.team-1 .linkedin-bg:hover {
+    background: #066e90!important;
 }
 
 /** pages 404 start **/
@@ -5783,6 +5791,11 @@ footer {
     color: #fff;
 }
 
+.contact-section .linkedin-bg {
+    background: #066e90;
+    color: #fff;
+}
+
 .contact-section .google-i {
     background: #c3291c;
 }
@@ -5793,6 +5806,9 @@ footer {
 
 .contact-section .twitter-i {
     background: #0cace0;
+}
+.contact-section .linkedin-i {
+    background: #066e90;
 }
 
 @media (max-width: 500px) {

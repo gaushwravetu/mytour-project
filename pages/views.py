@@ -1,14 +1,19 @@
 from django.shortcuts import render
-
+from pages.models import Team
 # Create your views here.
 def home(request):
-    return render(request,'pages/home.html')
+    teams = Team.objects.all()
+    data = {'teams': teams}
+    return render(request,'pages/home.html',data)
 
 def about(request):
-    return render(request,'pages/about.html')
+    teams = Team.objects.all()
+    data = {'teams':teams}
+    return render(request,'pages/about.html',data)
 
 def community(request):
     return render(request,'pages/community.html')
+    
 
 def places(request):
     return render(request,'pages/places.html')
