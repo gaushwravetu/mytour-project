@@ -14,9 +14,6 @@ def about(request):
 def community(request):
     return render(request,'pages/community.html')
     
-
-def places(request):
-    return render(request,'pages/places.html')
-
+    
 def contact(request):
     return render(request,'pages/contact.html')

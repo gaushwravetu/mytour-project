@@ -24,12 +24,12 @@
                     </li>
                     <li class="nav-item">
                         <a 
-                        {% if 'places' in request.path %}
+                        {% if 'place' in request.path %}
                         class="nav-link active"
                         {% else %}
                         class="nav-link"
                         {% endif %}
-                        href="{%url 'places' %}">
+                        href="{%url 'place' %}">
                             Places
                         </a>
                     </li>

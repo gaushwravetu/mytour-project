@@ -16,4 +16,32 @@ gitignore.io and search for django, copy all the contents and paste it into the 
 		]
 	ii) Now my task is to check the status of the static files as : python manage.py collectstatic, it will also create a seperate 		static files with "admin" support.
 
-3. 
+4. In the navbar section we've different sections : home community contact, made seperate seperate html file in folder pages. Also made base.html tobar.html navbar.html footer.html and base.html extends all three and futher home community contact extends base.html which reduces the lines of code.
+
+5. Installed postgresql and configured for windows, it is open source so codes are easily available in public domain, beast when it comes to complex operations, SQLite does not provide an authentication system. The database file itself can be updated/read by anyone,  security features, as well as complicated configurations, are built-in PostgreSQL to protect the database, The SQLite library is less than 500kb while PostgreSQL is much larger in size and many more reasons to use postgresql.
+	i) After its successful installation change the settings of dbsqlite configuration with postgresql as DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mytour',
+        'HOST': "localhost",
+        'USER': 'postgres',
+        'PASSWORD': 'mytour@123',
+    }
+}
+	ii) I'll use postgre later until setup superuser for our django and make team model in models.py and make migrations from cmd and register the module in admin.py and added other funtionality like filter, thumbnails of name, links added to the names and thumbnails and all.
+
+	iii) Now I'll make a moddle for team in model.py in pages app, (also require to install pakages of pillow and psycopg2 in virtual env). After that i can easily fill the data from django-admin panel. But i encountered with one issue: Since photo is not visible after clicking the link after uploading form django admin panel for that I'll do media file configuration in settings.py in media setting added manually section.
+	iv) again after configuration we'll add urls in urls.py: 
+				 	from django.conf.urls.static import static
+					from django.conf import settings
+					+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+6. Now our job is to show the data on the frontend of website: I'll go to views.py in order to receive the request in home section, dict of objects and fetch its data in home.html file using django html. Similarly for about section too.
+
+7. Now our job is to highlight the section as user moves form one section to another and it will be done in navbar.html
+
+8. Now I'll make a seperate app for places section, register the app in settings.py, make a folder manually for urls.py, now goto view.py and def place, now made a seperate folder place and make place.html and similarly written code as written for other pages. 
+
+9. Now its time to create the model for our place, hence all the required models created within models.py section, register this model in admin.py. After filling all the required attributes of the model, i need one more app(django-ckeditor: it will change the styling of text area, hence installed in virtual env), register the installed app in installed app section of settings.py. Import it in models.py and use RichTextField property.
+
+10. 
