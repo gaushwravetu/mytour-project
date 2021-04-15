@@ -44,4 +44,5 @@ gitignore.io and search for django, copy all the contents and paste it into the 
 
 9. Now its time to create the model for our place, hence all the required models created within models.py section, register this model in admin.py. After filling all the required attributes of the model, i need one more app(django-ckeditor: it will change the styling of text area, hence installed in virtual env), register the installed app in installed app section of settings.py. Import it in models.py and use RichTextField property.
 
-10. 
+10. After adding all the required attributes for a place, I'll filled the data for a place from django-admin section.
+11. Added some extra features like wise added in teams admin section, same like : search box, thumbnails, id, place_name to be clickable, filter box.

@@ -3,62 +3,9 @@ from datetime import datetime
 from ckeditor.fields import RichTextField
 # Create your models here.
 class Place(models.Model):
-    country_choice = (
-        ('AL', 'Alabama'),
-        ('AK', 'Alaska'),
-        ('AZ', 'Arizona'),
-        ('AR', 'Arkansas'),
-        ('CA', 'California'),
-        ('CO', 'Colorado'),
-        ('CT', 'Connecticut'),
-        ('DE', 'Delaware'),
-        ('DC', 'District Of Columbia'),
-        ('FL', 'Florida'),
-        ('GA', 'Georgia'),
-        ('HI', 'Hawaii'),
-        ('ID', 'Idaho'),
-        ('IL', 'Illinois'),
-        ('IN', 'Indiana'),
-        ('IA', 'Iowa'),
-        ('KS', 'Kansas'),
-        ('KY', 'Kentucky'),
-        ('LA', 'Louisiana'),
-        ('ME', 'Maine'),
-        ('MD', 'Maryland'),
-        ('MA', 'Massachusetts'),
-        ('MI', 'Michigan'),
-        ('MN', 'Minnesota'),
-        ('MS', 'Mississippi'),
-        ('MO', 'Missouri'),
-        ('MT', 'Montana'),
-        ('NE', 'Nebraska'),
-        ('NV', 'Nevada'),
-        ('NH', 'New Hampshire'),
-        ('NJ', 'New Jersey'),
-        ('NM', 'New Mexico'),
-        ('NY', 'New York'),
-        ('NC', 'North Carolina'),
-        ('ND', 'North Dakota'),
-        ('OH', 'Ohio'),
-        ('OK', 'Oklahoma'),
-        ('OR', 'Oregon'),
-        ('PA', 'Pennsylvania'),
-        ('RI', 'Rhode Island'),
-        ('SC', 'South Carolina'),
-        ('SD', 'South Dakota'),
-        ('TN', 'Tennessee'),
-        ('TX', 'Texas'),
-        ('UT', 'Utah'),
-        ('VT', 'Vermont'),
-        ('VA', 'Virginia'),
-        ('WA', 'Washington'),
-        ('WV', 'West Virginia'),
-        ('WI', 'Wisconsin'),
-        ('WY', 'Wyoming'),
-    )
     place_title = models.CharField(max_length=255)
-    country = models.CharField(choices=country_choice,max_length=100)
-    location = models.CharField(max_length=100,default='Agra')
+    country = models.CharField(max_length=100,default=' ')
+    location = models.CharField(max_length=100,default=' ')
     description = RichTextField()
     place_photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
     place_photo_1 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
@@ -67,9 +14,19 @@ class Place(models.Model):
     place_photo_4 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     is_trending = models.BooleanField(default=False)
     is_recommended = models.BooleanField(default=False)
+    one_strong_point_for_recommendations = models.CharField(max_length=100,default='In 2-3 words')
     architecture = models.CharField(max_length=100)
-    speciality = models.CharField(max_length=100,default='like: extensive use of marble')
+    feature1 = models.CharField(max_length=100,default='like: extensive use of marble')
+    feature2 = models.CharField(max_length=100,default=' ',blank=True)
+    feature3 = models.CharField(max_length=100,default=' ',blank=True)
+    feature4 = models.CharField(max_length=100,default=' ',blank=True)
+    feature5 = models.CharField(max_length=100,default=' ',blank=True)
+    story1 = RichTextField(default=' ')
+    story2 = RichTextField(default=' ')
+    story3 = RichTextField(default=' ')
+    story4 = RichTextField(default=' ')
     sea_level = models.CharField(max_length=10000)
+    no_of_visitors = models.CharField(max_length=1000000,default='1000')
     closeness_of_the_destination = RichTextField()
     added_date = models.DateTimeField(default=datetime.now,blank=True)
     

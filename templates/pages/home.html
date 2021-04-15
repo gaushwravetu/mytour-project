@@ -96,32 +96,30 @@
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
             <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                {% for place in trending_place %}
                 <div class="slick-slide-item">
                     <div class="tour-box-3">
                         <div class="tour-thumbnail">
-                            <a href="tour-details.html" class="tour-img">
+                            <a href="place_detail.html" class="tour-img">
                                 <div class="tag-2">Trending</div>
-                                <img class="d-block w-100" src="static/img/mytour/japan.jpg" alt="location-1">
+                                <img class="d-block w-100" src="{{place.place_photo.url}}" alt="location-1">
                             </a>
                             <div class="carbox-overlap-wrapper">
                                 <div class="overlap-box">
                                     <div class="overlap-btns-area">
                                         <div class="car-magnify-gallery">
-                                            <a href="static/img/mytour/japan-1.jpg" class="overlap-btn" data-sub-html="<h4>Shrines and Temples in Kyoto</h4><p>Visiting Kyoto’s stunning shrines and temples is one of the most popular things to do in Japan. While there are over 2,000 of these religious buildings scattered across the city.</p>">
+                                            <a href="{{place.place_photo_1.url}}" class="overlap-btn" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story1}}</p>">
                                                 <i class="fa fa-expand"></i>
-                                                <img class="hidden" src="static/img/mytour/japan-1.jpg" >
+                                                <img class="hidden" src="{{place.place_photo_1.url}}" >
                                             </a>
-                                            <a href="static/img/mytour/japan-2.jpg" class="hidden" data-sub-html="<h4>Sagano bamboo forest</h4><p>Arashiyama’s bamboo forest is undoubtedly one of the most famous Japan tourist attractions. The 30+ meter stalks filter the sunlight as you pass through, creating an other-worldly experience.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-2.jpg">
+                                            <a href="{{place.place_photo_2.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story2}}</p>">
+                                                <img class="hidden" src="{{place.place_photo_2.url}}">
                                             </a>
-                                            <a href="static/img/mytour/japan-3.jpg" class="hidden" data-sub-html="<h4>Akihabara: Tokyo’s Electric Town</h4><p>Akihabara the epicenter of Japan’s anime and gaming culture. Multi-story arcades, themed cafes, and colorful billboards fill the streets and skyline.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-3.jpg">
+                                            <a href="{{place.place_photo_3.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story3}}</p>">
+                                                <img class="hidden" src="{{place.place_photo_3.url}}">
                                             </a>
-                                            <a href="static/img/mytour/japan-4.jpg" class="hidden" data-sub-html="<h4>Cherry blossoms</h4><p>People around the world go crazy for Japan’s cherry blossoms. Hanami, the act of viewing flowers, is a national pastime in the spring months, with crowds of locals and travelers alike snapping photos of the pink blooms.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-4.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-5.jpg" class="hidden" data-sub-html="<h4>Nara deer park</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-5.jpg">
+                                            <a href="{{place.place_photo_4.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story4}}</p>">
+                                                <img class="hidden" src="{{place.place_photo_4.url}}">
                                             </a>
                                         </div>
                                     </div>
@@ -130,278 +128,24 @@
                         </div>
                         <div class="detail">
                             <h1 class="title">
-                                <a href="tour-details.html">Japan</a>
+                                <a href="place_detail.html">{{place.place_title}}</a>
                             </h1>
                             <div class="location">
-                                <a href="tour-details.html">
-                                    <i class="flaticon-pin"></i>Japan
+                                <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
+                                    <i class="flaticon-pin "></i>{{place.location}}
                                 </a>
                             </div>
                             <ul class="facilities-list clearfix">
-                                <li>Shrines and Temples in Kyoto</li>
-                                <li>Sagano bamboo forest</li>
-                                <li>Akihabara: Tokyo’s Electric Town</li>
-                                <li>Cherry blossoms</li>
-                                <li>Nara deer park</li>
+                                <li>{{place.feature1}}</li>
+                                <li>{{place.feature2}}</li>
+                                <li>{{place.feature3}}</li>
+                                <li>{{place.feature4}}</li>
+                                <li>{{place.feature5}}</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="slick-slide-item">
-                    <div class="tour-box-3">
-                        <div class="tour-thumbnail">
-                            <a href="tour-details.html" class="tour-img">
-                                <div class="tag-2">Trending</div>
-                                <img class="d-block w-100" src="static/img/mytour/japan.jpg" alt="location-1">
-                            </a>
-                            <div class="carbox-overlap-wrapper">
-                                <div class="overlap-box">
-                                    <div class="overlap-btns-area">
-                                        <div class="car-magnify-gallery">
-                                            <a href="static/img/mytour/japan-1.jpg" class="overlap-btn" data-sub-html="<h4>Shrines and Temples in Kyoto</h4><p>Visiting Kyoto’s stunning shrines and temples is one of the most popular things to do in Japan. While there are over 2,000 of these religious buildings scattered across the city.</p>">
-                                                <i class="fa fa-expand"></i>
-                                                <img class="hidden" src="static/img/mytour/japan-1.jpg" >
-                                            </a>
-                                            <a href="static/img/mytour/japan-2.jpg" class="hidden" data-sub-html="<h4>Sagano bamboo forest</h4><p>Arashiyama’s bamboo forest is undoubtedly one of the most famous Japan tourist attractions. The 30+ meter stalks filter the sunlight as you pass through, creating an other-worldly experience.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-2.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-3.jpg" class="hidden" data-sub-html="<h4>Akihabara: Tokyo’s Electric Town</h4><p>Akihabara the epicenter of Japan’s anime and gaming culture. Multi-story arcades, themed cafes, and colorful billboards fill the streets and skyline.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-3.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-4.jpg" class="hidden" data-sub-html="<h4>Cherry blossoms</h4><p>People around the world go crazy for Japan’s cherry blossoms. Hanami, the act of viewing flowers, is a national pastime in the spring months, with crowds of locals and travelers alike snapping photos of the pink blooms.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-4.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-5.jpg" class="hidden" data-sub-html="<h4>Nara deer park</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-5.jpg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h1 class="title">
-                                <a href="tour-details.html">Japan</a>
-                            </h1>
-                            <div class="location">
-                                <a href="tour-details.html">
-                                    <i class="flaticon-pin"></i>Japan
-                                </a>
-                            </div>
-                            <ul class="facilities-list clearfix">
-                                <li>Shrines and Temples in Kyoto</li>
-                                <li>Sagano bamboo forest</li>
-                                <li>Akihabara: Tokyo’s Electric Town</li>
-                                <li>Cherry blossoms</li>
-                                <li>Nara deer park</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="tour-box-3">
-                        <div class="tour-thumbnail">
-                            <a href="tour-details.html" class="tour-img">
-                                <div class="tag-2">Trending</div>
-                                <img class="d-block w-100" src="static/img/mytour/japan.jpg" alt="location-1">
-                            </a>
-                            <div class="carbox-overlap-wrapper">
-                                <div class="overlap-box">
-                                    <div class="overlap-btns-area">
-                                        <div class="car-magnify-gallery">
-                                            <a href="static/img/mytour/japan-1.jpg" class="overlap-btn" data-sub-html="<h4>Shrines and Temples in Kyoto</h4><p>Visiting Kyoto’s stunning shrines and temples is one of the most popular things to do in Japan. While there are over 2,000 of these religious buildings scattered across the city.</p>">
-                                                <i class="fa fa-expand"></i>
-                                                <img class="hidden" src="static/img/mytour/japan-1.jpg" >
-                                            </a>
-                                            <a href="static/img/mytour/japan-2.jpg" class="hidden" data-sub-html="<h4>Sagano bamboo forest</h4><p>Arashiyama’s bamboo forest is undoubtedly one of the most famous Japan tourist attractions. The 30+ meter stalks filter the sunlight as you pass through, creating an other-worldly experience.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-2.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-3.jpg" class="hidden" data-sub-html="<h4>Akihabara: Tokyo’s Electric Town</h4><p>Akihabara the epicenter of Japan’s anime and gaming culture. Multi-story arcades, themed cafes, and colorful billboards fill the streets and skyline.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-3.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-4.jpg" class="hidden" data-sub-html="<h4>Cherry blossoms</h4><p>People around the world go crazy for Japan’s cherry blossoms. Hanami, the act of viewing flowers, is a national pastime in the spring months, with crowds of locals and travelers alike snapping photos of the pink blooms.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-4.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-5.jpg" class="hidden" data-sub-html="<h4>Nara deer park</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-5.jpg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h1 class="title">
-                                <a href="tour-details.html">Japan</a>
-                            </h1>
-                            <div class="location">
-                                <a href="tour-details.html">
-                                    <i class="flaticon-pin"></i>Japan
-                                </a>
-                            </div>
-                            <ul class="facilities-list clearfix">
-                                <li>Shrines and Temples in Kyoto</li>
-                                <li>Sagano bamboo forest</li>
-                                <li>Akihabara: Tokyo’s Electric Town</li>
-                                <li>Cherry blossoms</li>
-                                <li>Nara deer park</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="tour-box-3">
-                        <div class="tour-thumbnail">
-                            <a href="tour-details.html" class="tour-img">
-                                <div class="tag-2">Trending</div>
-                                <img class="d-block w-100" src="static/img/mytour/japan.jpg" alt="location-1">
-                            </a>
-                            <div class="carbox-overlap-wrapper">
-                                <div class="overlap-box">
-                                    <div class="overlap-btns-area">
-                                        <div class="car-magnify-gallery">
-                                            <a href="static/img/mytour/japan-1.jpg" class="overlap-btn" data-sub-html="<h4>Shrines and Temples in Kyoto</h4><p>Visiting Kyoto’s stunning shrines and temples is one of the most popular things to do in Japan. While there are over 2,000 of these religious buildings scattered across the city.</p>">
-                                                <i class="fa fa-expand"></i>
-                                                <img class="hidden" src="static/img/mytour/japan-1.jpg" >
-                                            </a>
-                                            <a href="static/img/mytour/japan-2.jpg" class="hidden" data-sub-html="<h4>Sagano bamboo forest</h4><p>Arashiyama’s bamboo forest is undoubtedly one of the most famous Japan tourist attractions. The 30+ meter stalks filter the sunlight as you pass through, creating an other-worldly experience.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-2.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-3.jpg" class="hidden" data-sub-html="<h4>Akihabara: Tokyo’s Electric Town</h4><p>Akihabara the epicenter of Japan’s anime and gaming culture. Multi-story arcades, themed cafes, and colorful billboards fill the streets and skyline.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-3.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-4.jpg" class="hidden" data-sub-html="<h4>Cherry blossoms</h4><p>People around the world go crazy for Japan’s cherry blossoms. Hanami, the act of viewing flowers, is a national pastime in the spring months, with crowds of locals and travelers alike snapping photos of the pink blooms.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-4.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-5.jpg" class="hidden" data-sub-html="<h4>Nara deer park</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-5.jpg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h1 class="title">
-                                <a href="tour-details.html">Japan</a>
-                            </h1>
-                            <div class="location">
-                                <a href="tour-details.html">
-                                    <i class="flaticon-pin"></i>Japan
-                                </a>
-                            </div>
-                            <ul class="facilities-list clearfix">
-                                <li>Shrines and Temples in Kyoto</li>
-                                <li>Sagano bamboo forest</li>
-                                <li>Akihabara: Tokyo’s Electric Town</li>
-                                <li>Cherry blossoms</li>
-                                <li>Nara deer park</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="tour-box-3">
-                        <div class="tour-thumbnail">
-                            <a href="tour-details.html" class="tour-img">
-                                <div class="tag-2">Trending</div>
-                                <img class="d-block w-100" src="static/img/mytour/japan.jpg" alt="location-1">
-                            </a>
-                            <div class="carbox-overlap-wrapper">
-                                <div class="overlap-box">
-                                    <div class="overlap-btns-area">
-                                        <div class="car-magnify-gallery">
-                                            <a href="static/img/mytour/japan-1.jpg" class="overlap-btn" data-sub-html="<h4>Shrines and Temples in Kyoto</h4><p>Visiting Kyoto’s stunning shrines and temples is one of the most popular things to do in Japan. While there are over 2,000 of these religious buildings scattered across the city.</p>">
-                                                <i class="fa fa-expand"></i>
-                                                <img class="hidden" src="static/img/mytour/japan-1.jpg" >
-                                            </a>
-                                            <a href="static/img/mytour/japan-2.jpg" class="hidden" data-sub-html="<h4>Sagano bamboo forest</h4><p>Arashiyama’s bamboo forest is undoubtedly one of the most famous Japan tourist attractions. The 30+ meter stalks filter the sunlight as you pass through, creating an other-worldly experience.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-2.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-3.jpg" class="hidden" data-sub-html="<h4>Akihabara: Tokyo’s Electric Town</h4><p>Akihabara the epicenter of Japan’s anime and gaming culture. Multi-story arcades, themed cafes, and colorful billboards fill the streets and skyline.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-3.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-4.jpg" class="hidden" data-sub-html="<h4>Cherry blossoms</h4><p>People around the world go crazy for Japan’s cherry blossoms. Hanami, the act of viewing flowers, is a national pastime in the spring months, with crowds of locals and travelers alike snapping photos of the pink blooms.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-4.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-5.jpg" class="hidden" data-sub-html="<h4>Nara deer park</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-5.jpg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h1 class="title">
-                                <a href="tour-details.html">Japan</a>
-                            </h1>
-                            <div class="location">
-                                <a href="tour-details.html">
-                                    <i class="flaticon-pin"></i>Japan
-                                </a>
-                            </div>
-                            <ul class="facilities-list clearfix">
-                                <li>Shrines and Temples in Kyoto</li>
-                                <li>Sagano bamboo forest</li>
-                                <li>Akihabara: Tokyo’s Electric Town</li>
-                                <li>Cherry blossoms</li>
-                                <li>Nara deer park</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide-item">
-                    <div class="tour-box-3">
-                        <div class="tour-thumbnail">
-                            <a href="tour-details.html" class="tour-img">
-                                <div class="tag-2">Trending</div>
-                                <img class="d-block w-100" src="static/img/mytour/japan.jpg" alt="location-1">
-                            </a>
-                            <div class="carbox-overlap-wrapper">
-                                <div class="overlap-box">
-                                    <div class="overlap-btns-area">
-                                        <div class="car-magnify-gallery">
-                                            <a href="static/img/mytour/japan-1.jpg" class="overlap-btn" data-sub-html="<h4>Shrines and Temples in Kyoto</h4><p>Visiting Kyoto’s stunning shrines and temples is one of the most popular things to do in Japan. While there are over 2,000 of these religious buildings scattered across the city.</p>">
-                                                <i class="fa fa-expand"></i>
-                                                <img class="hidden" src="static/img/mytour/japan-1.jpg" >
-                                            </a>
-                                            <a href="static/img/mytour/japan-2.jpg" class="hidden" data-sub-html="<h4>Sagano bamboo forest</h4><p>Arashiyama’s bamboo forest is undoubtedly one of the most famous Japan tourist attractions. The 30+ meter stalks filter the sunlight as you pass through, creating an other-worldly experience.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-2.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-3.jpg" class="hidden" data-sub-html="<h4>Akihabara: Tokyo’s Electric Town</h4><p>Akihabara the epicenter of Japan’s anime and gaming culture. Multi-story arcades, themed cafes, and colorful billboards fill the streets and skyline.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-3.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-4.jpg" class="hidden" data-sub-html="<h4>Cherry blossoms</h4><p>People around the world go crazy for Japan’s cherry blossoms. Hanami, the act of viewing flowers, is a national pastime in the spring months, with crowds of locals and travelers alike snapping photos of the pink blooms.</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-4.jpg">
-                                            </a>
-                                            <a href="static/img/mytour/japan-5.jpg" class="hidden" data-sub-html="<h4>Nara deer park</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy....</p>">
-                                                <img class="hidden" src="static/img/mytour/japan-5.jpg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h1 class="title">
-                                <a href="tour-details.html">Japan</a>
-                            </h1>
-                            <div class="location">
-                                <a href="tour-details.html">
-                                    <i class="flaticon-pin"></i>Japan
-                                </a>
-                            </div>
-                            <ul class="facilities-list clearfix">
-                                <li>Shrines and Temples in Kyoto</li>
-                                <li>Sagano bamboo forest</li>
-                                <li>Akihabara: Tokyo’s Electric Town</li>
-                                <li>Cherry blossoms</li>
-                                <li>Nara deer park</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <div class="slick-btn">
                 <div class="slick-prev slick-arrow-buton sab-4">
@@ -414,9 +158,9 @@
         </div>
     </div>
 </div>
-<!-- Featured car end -->
+<!-- Featured place end -->
 
-<!-- Rent car start -->
+<!-- Recommended place start -->
 <div class="featured-car content-area">
     <div class="container">
         <!-- Main title -->
@@ -425,16 +169,17 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="row">
+            {% for place in recommended_place %}
             <div class="col-lg-4 col-md-6">
                 <div class="car-box">
                     <div class="tour-thumbnail">
-                        <a href="tour-details.html" class="tour-img">
+                        <a href="place_detail.html" class="tour-img">
                             <div class="tag">Latest</div>
-                            <img class="d-block w-100" src="static/img/mytour/peru-0.jpg" alt="location-0">
+                            <img class="d-block w-100" src="{{place.place_photo.url}}" alt="location-0">
                             <div class="facilities-list clearfix">
                                 <ul>
                                     <li>
-                                        <span><i class="flaticon-calendar-1"></i></span>2021
+                                        <span><i class="flaticon-calendar-1"></i></span>{% now "Y" %}
                                     </li>
                                 </ul>
                             </div>
@@ -443,18 +188,18 @@
                             <div class="overlap-box">
                                 <div class="overlap-btns-area">
                                     <div class="car-magnify-gallery">
-                                        <a href="static/img/mytour/peru-1.jpg" class="overlap-btn">
+                                        <a href="{{place.place_photo_1.url}}" class="overlap-btn" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story1}}</p>">
                                             <i class="fa fa-expand"></i>
-                                            <img class="hidden" src="static/img/mytour/peru-1.jpg">
+                                            <img class="hidden" src="{{place.place_photo_1.url}}">
                                         </a>
-                                        <a href="static/img/mytour/peru-2.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-2.jpg">
+                                        <a href="{{place.place_photo_2.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story2}}</p>">
+                                            <img class="hidden" src="{{place.place_photo_2.url}}">
                                         </a>
-                                        <a href="static/img/mytour/peru-3.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-3.jpg">
+                                        <a href="{{place.place_photo_3.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story3}}</p>">
+                                            <img class="hidden" src="{{place.place_photo_3.url}}">
                                         </a>
-                                        <a href="static/img/mytour/peru-4.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-4.jpg">
+                                        <a href="{{place.place_photo_4.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story4}}</p>">
+                                            <img class="hidden" src="{{place.place_photo_4.url}}">
                                         </a>
                                     </div>
                                 </div>
@@ -463,290 +208,26 @@
                     </div>
                     <div class="detail">
                         <h1 class="title">
-                            <a href="tour-details.html">Machu Picchu</a>
+                            <a href="place_detail.html">{{place.place_title}}</a>
                         </h1>
                         <div class="location">
-                            <a href="tour-details.html">
-                                <i class="flaticon-pin"></i>Peru
+                            <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
+                                <i class="flaticon-pin"></i>{{place.location}}
                             </a>
                         </div>
                     </div>
                     <div class="footer clearfix">
                         <div class="pull-left ratings days">
-                            <p class="cartype">Recently Discovered</p>
+                            <p class="cartype">{{place.one_strong_point_for_recommendations}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="car-box">
-                    <div class="tour-thumbnail">
-                        <a href="tour-details.html" class="tour-img">
-                            <div class="tag">Latest</div>
-                            <img class="d-block w-100" src="static/img/mytour/peru-0.jpg" alt="location-0">
-                            <div class="facilities-list clearfix">
-                                <ul>
-                                    <li>
-                                        <span><i class="flaticon-calendar-1"></i></span>2021
-                                    </li>
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="carbox-overlap-wrapper">
-                            <div class="overlap-box">
-                                <div class="overlap-btns-area">
-                                    <div class="car-magnify-gallery">
-                                        <a href="static/img/mytour/peru-1.jpg" class="overlap-btn">
-                                            <i class="fa fa-expand"></i>
-                                            <img class="hidden" src="static/img/mytour/peru-1.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-2.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-2.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-3.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-3.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-4.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-4.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <h1 class="title">
-                            <a href="tour-details.html">Machu Picchu</a>
-                        </h1>
-                        <div class="location">
-                            <a href="tour-details.html">
-                                <i class="flaticon-pin"></i>Peru
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer clearfix">
-                        <div class="pull-left ratings days">
-                            <p class="cartype">Recently Discovered</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="car-box">
-                    <div class="tour-thumbnail">
-                        <a href="tour-details.html" class="tour-img">
-                            <div class="tag">Latest</div>
-                            <img class="d-block w-100" src="static/img/mytour/peru-0.jpg" alt="location-0">
-                            <div class="facilities-list clearfix">
-                                <ul>
-                                    <li>
-                                        <span><i class="flaticon-calendar-1"></i></span>2021
-                                    </li>
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="carbox-overlap-wrapper">
-                            <div class="overlap-box">
-                                <div class="overlap-btns-area">
-                                    <div class="car-magnify-gallery">
-                                        <a href="static/img/mytour/peru-1.jpg" class="overlap-btn">
-                                            <i class="fa fa-expand"></i>
-                                            <img class="hidden" src="static/img/mytour/peru-1.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-2.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-2.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-3.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-3.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-4.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-4.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <h1 class="title">
-                            <a href="tour-details.html">Machu Picchu</a>
-                        </h1>
-                        <div class="location">
-                            <a href="tour-details.html">
-                                <i class="flaticon-pin"></i>Peru
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer clearfix">
-                        <div class="pull-left ratings days">
-                            <p class="cartype">Recently Discovered</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="car-box">
-                    <div class="tour-thumbnail">
-                        <a href="tour-details.html" class="tour-img">
-                            <div class="tag">Latest</div>
-                            <img class="d-block w-100" src="static/img/mytour/peru-0.jpg" alt="location-0">
-                            <div class="facilities-list clearfix">
-                                <ul>
-                                    <li>
-                                        <span><i class="flaticon-calendar-1"></i></span>2021
-                                    </li>
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="carbox-overlap-wrapper">
-                            <div class="overlap-box">
-                                <div class="overlap-btns-area">
-                                    <div class="car-magnify-gallery">
-                                        <a href="static/img/mytour/peru-1.jpg" class="overlap-btn">
-                                            <i class="fa fa-expand"></i>
-                                            <img class="hidden" src="static/img/mytour/peru-1.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-2.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-2.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-3.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-3.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-4.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-4.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <h1 class="title">
-                            <a href="tour-details.html">Machu Picchu</a>
-                        </h1>
-                        <div class="location">
-                            <a href="tour-details.html">
-                                <i class="flaticon-pin"></i>Peru
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer clearfix">
-                        <div class="pull-left ratings days">
-                            <p class="cartype">Recently Discovered</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="car-box">
-                    <div class="tour-thumbnail">
-                        <a href="tour-details.html" class="tour-img">
-                            <div class="tag">Latest</div>
-                            <img class="d-block w-100" src="static/img/mytour/peru-0.jpg" alt="location-0">
-                            <div class="facilities-list clearfix">
-                                <ul>
-                                    <li>
-                                        <span><i class="flaticon-calendar-1"></i></span>2021
-                                    </li>
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="carbox-overlap-wrapper">
-                            <div class="overlap-box">
-                                <div class="overlap-btns-area">
-                                    <div class="car-magnify-gallery">
-                                        <a href="static/img/mytour/peru-1.jpg" class="overlap-btn">
-                                            <i class="fa fa-expand"></i>
-                                            <img class="hidden" src="static/img/mytour/peru-1.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-2.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-2.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-3.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-3.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-4.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-4.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <h1 class="title">
-                            <a href="tour-details.html">Machu Picchu</a>
-                        </h1>
-                        <div class="location">
-                            <a href="tour-details.html">
-                                <i class="flaticon-pin"></i>Peru
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer clearfix">
-                        <div class="pull-left ratings days">
-                            <p class="cartype">Recently Discovered</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="car-box">
-                    <div class="tour-thumbnail">
-                        <a href="tour-details.html" class="tour-img">
-                            <div class="tag">Latest</div>
-                            <img class="d-block w-100" src="static/img/mytour/peru-0.jpg" alt="location-0">
-                            <div class="facilities-list clearfix">
-                                <ul>
-                                    <li>
-                                        <span><i class="flaticon-calendar-1"></i></span>2021
-                                    </li>
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="carbox-overlap-wrapper">
-                            <div class="overlap-box">
-                                <div class="overlap-btns-area">
-                                    <div class="car-magnify-gallery">
-                                        <a href="static/img/mytour/peru-1.jpg" class="overlap-btn">
-                                            <i class="fa fa-expand"></i>
-                                            <img class="hidden" src="static/img/mytour/peru-1.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-2.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-2.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-3.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-3.jpg">
-                                        </a>
-                                        <a href="static/img/mytour/peru-4.jpg" class="hidden">
-                                            <img class="hidden" src="static/img/mytour/peru-4.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <h1 class="title">
-                            <a href="tour-details.html">Machu Picchu</a>
-                        </h1>
-                        <div class="location">
-                            <a href="tour-details.html">
-                                <i class="flaticon-pin"></i>Peru
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer clearfix">
-                        <div class="pull-left ratings days">
-                            <p class="cartype">Recently Discovered</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
-<!-- Rent car end -->
+<!-- Recommendations place end -->
 
 
 <!-- Our team start -->
