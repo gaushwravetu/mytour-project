@@ -6856,10 +6856,13 @@ footer {
 
 .carousel-indicators-section .list-inline-item a img {
     border-radius: 0;
+    height: 100px;
+    width: 100%;
 }
 
 .carousel-item img{
     width: 100%;
+    height: 450px;
 }
 
 .carousel-indicators-section .carousel-indicators > li {

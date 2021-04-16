@@ -100,7 +100,7 @@
                 <div class="slick-slide-item">
                     <div class="tour-box-3">
                         <div class="tour-thumbnail">
-                            <a href="place_detail.html" class="tour-img">
+                            <a href="{% url 'place_detail' place.id %}" class="tour-img">
                                 <div class="tag-2">Trending</div>
                                 <img class="d-block w-100" src="{{place.place_photo.url}}" alt="location-1">
                             </a>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="detail">
                             <h1 class="title">
-                                <a href="place_detail.html">{{place.place_title}}</a>
+                                <a href="{% url 'place_detail' place.id %}">{{place.place_title}}</a>
                             </h1>
                             <div class="location">
                                 <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
@@ -173,7 +173,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="car-box">
                     <div class="tour-thumbnail">
-                        <a href="place_detail.html" class="tour-img">
+                        <a href="{% url 'place_detail' place.id %}" class="tour-img">
                             <div class="tag">Latest</div>
                             <img class="d-block w-100" src="{{place.place_photo.url}}" alt="location-0">
                             <div class="facilities-list clearfix">
@@ -208,7 +208,7 @@
                     </div>
                     <div class="detail">
                         <h1 class="title">
-                            <a href="place_detail.html">{{place.place_title}}</a>
+                            <a href="{% url 'place_detail' place.id %}">{{place.place_title}}</a>
                         </h1>
                         <div class="location">
                             <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
