@@ -22,12 +22,12 @@
         <div class="row">
             <div class="col-lg-8 col-md-12">
                 <div class="row">
-                {% for place in places %}
+                    {% for place in places %}
                     <div class="col-lg-6 col-md-6" name='redirect'>
                         <div class="tour-box-3">
                             <div class="tour-thumbnail">
                                 <a href="{% url 'place_detail' place.id %}" class="tour-img">
-                                    <div class="tag-2 bg-active">Featured</div>
+                                    <div class="tag-2 bg-active"></div>
                                     <img class="d-block w-100" src="{{place.place_photo.url}}" alt="Place">
                                 </a>
                                 <div class="carbox-overlap-wrapper">
@@ -39,27 +39,32 @@
                                                     <img class="hidden" src="{{place.place_photo.url}}">
                                                 </a>
                                                 {% if place.place_photo_1 %}
-                                                <a href="{{place.place_photo_1.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story1}}</p>">
+                                                <a href="{{place.place_photo_1.url}}" class="hidden"
+                                                    data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story1}}</p>">
                                                     <img class="hidden" src="{{place.place_photo_1.url}}">
                                                 </a>
                                                 {% endif %}
                                                 {% if place.place_photo_2 %}
-                                                <a href="{{place.place_photo_2.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story2}}</p>">
+                                                <a href="{{place.place_photo_2.url}}" class="hidden"
+                                                    data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story2}}</p>">
                                                     <img class="hidden" src="{{place.place_photo_2.url}}">
                                                 </a>
                                                 {% endif %}
                                                 {% if place.place_photo_3 %}
-                                                <a href="{{place.place_photo_3.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story3}}</p>">
+                                                <a href="{{place.place_photo_3.url}}" class="hidden"
+                                                    data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story3}}</p>">
                                                     <img class="hidden" src="{{place.place_photo_3.url}}">
                                                 </a>
                                                 {% endif %}
                                                 {% if place.place_photo_4 %}
-                                                <a href="{{place.place_photo_4.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story4}}</p>">
+                                                <a href="{{place.place_photo_4.url}}" class="hidden"
+                                                    data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story4}}</p>">
                                                     <img class="hidden" src="{{place.place_photo_4.url}}">
                                                 </a>
                                                 {% endif %}
                                                 {% if place.place_photo_5 %}
-                                                <a href="{{place.place_photo_5.url}}" class="hidden" data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story5}}</p>">
+                                                <a href="{{place.place_photo_5.url}}" class="hidden"
+                                                    data-sub-html="<h4>{{place.place_title}}</h4><p>{{place.story5}}</p>">
                                                     <img class="hidden" src="{{place.place_photo_5.url}}">
                                                 </a>
                                                 {% endif %}
@@ -94,19 +99,40 @@
                 <!-- Page navigation start -->
                 <div class="pagination-box p-box-2 text-center">
                     <nav aria-label="Page navigation example">
-                    {% if places.has_other_pages %}
+                        {% if places.has_other_pages %}
                         <ul class="pagination">
+                            {% if places.has_previous %}
                             <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
+                                <a class="page-link" href="?page={{places.previous_page_number}}"><i
+                                        class="fa fa-angle-left"></i></a>
                             </li>
-                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link"><i class="fa fa-angle-left"></i></a>
+                            </li>
+                            {% endif %}
+                            {% comment %} {% endcomment %}
+                            {% for i in places.paginator.page_range  %}
+                            {% if places.number == i %}
+                            <li class="page-item"><a class="page-link active" href="#">{{i}}</a></li>
+                            {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                            {% endif %}
+                            {% endfor %}
+
+                            {% if places.has_next %}
                             <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
+                                <a class="page-link" href="?page={{places.next_page_number}}"><i
+                                        class="fa fa-angle-right"></i></a>
                             </li>
+                            {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link"><i class="fa fa-angle-right"></i></a>
+                            </li>
+                            {% endif %}
+
                         </ul>
-                    {% endif %}
+                        {% endif %}
                     </nav>
                 </div>
             </div>
@@ -114,64 +140,76 @@
                 <div class="sidebar-right">
                     <!-- Advanced search start -->
                     <div class="widget advanced-search2">
-                        <h3 class="sidebar-title">Search your desire car</h3>
-                        <form method="GET">
+                        <h3 class="sidebar-title">Search your desire place</h3>
+                        <form action="{% url 'search' %}" method="">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="brand">
-                                    <option>Country</option>
-                                    <option>A</option>
-                                    <option>B</option>
-                                    <option>C</option>
-                                    <option>D</option>
-                                    <option>E</option>
+                                <input type="text" name="keyword" placeholder="Search by name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control search-fields" name="country">
+                                    <option selected="true" disabled="disabled">Select Country</option>
+                                    {% for country in country_search %}
+                                    <option value="{{country}}">{{country}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="location">
-                                    <option>Locations</option>
-                                    <option>A</option>
-                                    <option>B</option>
-                                    <option>C</option>
-                                    <option>D</option>
-                                    <option>E</option>
-                                    <option>F</option>
+                                <select class="form-control search-fields" name="location">
+                                    <option selected="true" disabled="disabled">Select Location</option>
+                                    {% for location in location_search %}
+                                    <option value="{{location}}">{{location}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="category">
-                                    <option>Architecture</option>
-                                    <option>A</option>
-                                    <option>B</option>
-                                    <option>C</option>
-                                    <option>D</option>
-                                    <option>E</option>
-                                    <option>F</option>
+                                <select class="form-control search-fields" name="architecture">
+                                    <option selected="true" disabled="disabled">Select Architecture</option>
+                                    {% for architecture in architecture_search %}
+                                    <option value="{{architecture}}">{{architecture}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
-                            <div class="form-group mb-0">
-                                <button class="search-button btn">Search</button>
-                            </div>
-                        </form>
+                            <button class="btn btn-block button-theme btn-md">
+                                <i class="fa fa-search"></i> Search
+                            </button>
                     </div>
+                    </form>
+                </div>
 
-                    <!-- Question start -->
-                    <div class="widget question widget-3">
-                        <h5 class="sidebar-title">Follow us</h5>
-                        <div class="social-list clearfix">
-                            <ul>
-                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
-                                <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
+                <!-- Question start -->
+                <div class="widget question widget-3">
+                    <h5 class="sidebar-title">Follow us</h5>
+                    <div class="social-list clearfix">
+                        <ul>
+                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 <!-- Featured place end -->
+<!-- Intro section start -->
+<div class="intro-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                <div class="intro-text">
+                    <h3>ALREADY ADVENTURED!</h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <a href="{% url 'community' %}" class="btn btn-md">POST YOUR EXPERIENCE</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Intro section end -->
 
 {%endblock content%}
