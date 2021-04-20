@@ -25,7 +25,7 @@ strong {
 }
 
 span {
-    color: #535353;
+    color: #f0151f;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -9757,7 +9757,7 @@ input, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
         color: #495057 !important;
 }
 .contact-dealer.modal-header{
-    background: #f0151f !important;
+    background: #ffeced !important;
 }
 .contact-dealer.modal-header img{
     width: 75% !important;

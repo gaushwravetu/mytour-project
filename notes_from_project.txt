@@ -57,4 +57,8 @@ gitignore.io and search for django, copy all the contents and paste it into the 
 15. Now its time to work on pagination part of the page : for that i have to code for the buttons which will be active for current page rendring. Disabled the button when no prev page available and similary disable when no next page available.
 
 16. Now its time to work on search window, when search for any keyword like: India, it will be landed in different page of search.html. For that i have to create url for name=search in place.urls.py and then def search function in views.py. Now I'll be ready to design the search.html page. If we type any keyword then it will have to give results in the search page.For that i have written a code in place.views.py in def search : search for keyword in places if not found then it will search inside description and show the results.
+
+17. Now its time to design our django-admin panel which match to the design of out website that feels unibody, made a file base_site.html(same name important to reflect the changes on django-admin pannel) inside templete inside new folder admin.Here, I removed the basic django-administration text with out website logo and also made it clickable which after clicking render the admin to admin-home page.
+
+18. Now its time to design our authentication system(login+register), 
  
