@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
+{% block title %} | {{single_place.place_title}} {% endblock  %}
 {% block content %}
-
 {% load static %}
 
 <!-- Sub banner start -->
@@ -10,7 +10,7 @@
             <h1>{{single_place.place_title}}</h1>
             <ul class="breadcrumbs">
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li class="active"></li>
+                <li class="active">{{single_place.place_title}}</li>
             </ul>
         </div>
     </div>
