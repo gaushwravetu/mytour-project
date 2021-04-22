@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'place.apps.PlaceConfig',
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -93,7 +94,7 @@ DATABASES = {
         'NAME': 'mytour',
         'HOST': "localhost",
         'USER': 'postgres',
-        'PASSWORD': 'mytour@123',
+        'PASSWORD': '',
     }
 }
 
@@ -151,3 +152,10 @@ MESSAGE_TAGS = {
 }
 
 SITE_ID=1
+
+# email settings added manually
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gauravmyntra097@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
