@@ -29,9 +29,8 @@
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th scope="col">#</th>
 				<th scope="col">Place Name</th>
-				<th scope="col">Inquiry</th>
+				<th scope="col">Your Inquiry</th>
 				<th scope="col">City</th>
 				<th scope="col">Action</th>
 			</tr>
@@ -39,7 +38,6 @@
 		<tbody>
 			{% for inquiry in inquiries %}
 			<tr>
-				<th scope="row">1</th>
 				<td>{{inquiry.place_title}}</td>
 				<td>{{inquiry.customer_need}}</td>
 				<td>{{inquiry.city}}</td>
