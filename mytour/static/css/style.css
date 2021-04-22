@@ -2135,7 +2135,7 @@ input[type=checkbox]:checked + label:before {
     opacity: 1;
 }
 
-.carbox-overlap-wrapper {
+.placebox-overlap-wrapper {
     visibility: hidden;
     background: rgba(0, 0, 0, 0.6);
     height: 100%;
@@ -2154,7 +2154,7 @@ input[type=checkbox]:checked + label:before {
     transform: translateY(-50%);
 }
 
-.carbox-overlap-wrapper h2 {
+.placebox-overlap-wrapper h2 {
     font-size: 16px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
@@ -2164,7 +2164,7 @@ input[type=checkbox]:checked + label:before {
     color: #fff;
 }
 
-.carbox-overlap-wrapper h4 {
+.placebox-overlap-wrapper h4 {
     font-size: 16px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
@@ -2176,7 +2176,7 @@ input[type=checkbox]:checked + label:before {
     display: inline-block;
 }
 
-.tour-thumbnail:hover > .carbox-overlap-wrapper {
+.tour-thumbnail:hover > .placebox-overlap-wrapper {
     visibility: visible;
     top: 0;
     cursor: pointer;
@@ -3031,11 +3031,11 @@ input[type=checkbox]:checked + label:before {
 }
 
 /** Featured car 4 start**/
-.featured-car-4 .carousel-item {
+.featured-place-4 .carousel-item {
     margin-bottom: 30px;
 }
 
-.featured-car-4 .carousel-indicators li {
+.featured-place-4 .carousel-indicators li {
     position: relative;
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
@@ -3049,15 +3049,15 @@ input[type=checkbox]:checked + label:before {
     background-color: #2f2f2f;
 }
 
-.featured-car-4 .carousel-indicators {
+.featured-place-4 .carousel-indicators {
     bottom: -15px;
 }
 
-.featured-car-4 .btn:focus, .btn:active, .btn:focus {
+.featured-place-4 .btn:focus, .btn:active, .btn:focus {
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.1)!important;
 }
 
-.featured-car-4 .btn:focus, .btn:active, .btn:focus {
+.featured-place-4 .btn:focus, .btn:active, .btn:focus {
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.1)!important;
 }
 
@@ -4461,7 +4461,7 @@ footer {
     width: 100%;
     padding: 100px 0 70px;
 }
-.featured-car.content-area{
+.featured-place.content-area{
     background: rgba(0, 0, 0, 0.04) url(../img/bg-img-6.jpg) top left repeat;
     background-size: cover;
     width: 100%;
@@ -6773,13 +6773,13 @@ footer {
     margin-right: 0;
 }
 
-.car-properties .list-inline-item {
+.tour-properties .list-inline-item {
     width: 80px;
     margin: 5px!important;
     border-radius: 5%;
 }
 
-.car-properties .list-inline-item a img {
+.tour-properties .list-inline-item a img {
     width: 100%;
     border: none;
     border-radius: 5%;
@@ -6839,7 +6839,7 @@ footer {
     margin-right: 1px;
 }
 
-.car-properties {
+.tour-properties {
     width: 100%;
 }
 
@@ -6850,7 +6850,7 @@ footer {
     width: 100%;
 }
 
-.carousel-indicators-section .car-properties .list-inline-item {
+.carousel-indicators-section .tour-properties .list-inline-item {
     width: 20%;
     margin: 0!important;
     border-radius: 0!important;
@@ -7056,7 +7056,7 @@ footer {
     color: orange;
 }
 
-.shop-info .car-properties .list-inline-item{
+.shop-info .tour-properties .list-inline-item{
     width: 50px;
 }
 
@@ -7133,18 +7133,18 @@ table {
     height: 300px;
 }
 
-.about-car{
+.about-tour{
     padding-right: 40px;
 }
 
-.about-car .best-used-car h3 {
+.about-tour .best-used-place h3 {
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 15px;
     /* text-transform: uppercase; */
 }
 
-.about-car .best-used-car ul li {
+.about-tour .best-used-place ul li {
     margin-bottom: 10px;
     font-size: 15px;
     padding-left: 26px;
@@ -7152,27 +7152,27 @@ table {
     font-weight: 500;
 }
 
-.about-car .best-used-car ul li i {
+.about-tour .best-used-place ul li i {
     left: 0;
     position: absolute;
     top: 3px;
 }
 
-.about-car .carousel-inner img{
+.about-tour .carousel-inner img{
     border-radius: 5px;
 }
 
-.about-car .best-used-car{
+.about-tour .best-used-place{
     padding-left: 20px;
 }
 
-.about-car .tour-details-sliders .list-inline {
+.about-tour .tour-details-sliders .list-inline {
     width: 100%;
     bottom: 10px;
     position: absolute;
 }
 
-.about-car  .car-properties .list-inline-item {
+.about-tour  .tour-properties .list-inline-item {
     width: 60px;
     margin: 3px!important;
     border-radius: 5%;
@@ -8239,7 +8239,7 @@ table {
         padding-right: 15px;
     }
 
-    .best-used-car h3 {
+    .best-used-place h3 {
         font-size: 30px;
     }
 
@@ -8394,11 +8394,11 @@ table {
         padding: 5px 0;
     }
 
-    .about-car .best-used-car h3 {
+    .about-tour .best-used-place h3 {
         font-size: 22px;
     }
 
-    .about-car .best-used-car{
+    .about-tour .best-used-place{
         padding: 0;
         margin-top: 30px;
     }
@@ -8490,7 +8490,7 @@ table {
         margin-bottom: 30px;
     }
 
-    .best-used-car h3 {
+    .best-used-place h3 {
         font-size: 26px;
     }
 
@@ -9243,7 +9243,7 @@ table {
         display: none;
     }
 
-    .car-properties .list-inline-item {
+    .tour-properties .list-inline-item {
         width: 45px;
         margin: 3px!important;
     }

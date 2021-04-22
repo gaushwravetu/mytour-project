@@ -33,7 +33,7 @@
     color: #f0151f;
 }
 
-.about-car .best-used-car h3 span{
+.about-tour .best-used-place h3 span{
     color: #f0151f;
 }
 
@@ -269,7 +269,7 @@ input[type=checkbox]:checked + label:before {
     border: solid 1px#f0151f;
 }
 
-.featured-car-4 .carousel-indicators li.active {
+.featured-place-4 .carousel-indicators li.active {
     background: #f0151f;
 }
 
@@ -472,7 +472,7 @@ footer .footer-item .contact-info li label a:hover {
     background: #f0151f;
 }
 
-.best-used-car ul li i {
+.best-used-place ul li i {
     color: #f0151f;
 }
 
