@@ -2110,7 +2110,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 /** Property box start **/
-.car-box {
+.tour-box {
     position: relative;
     margin-bottom: 30px;
     background: #fff;
@@ -2135,7 +2135,7 @@ input[type=checkbox]:checked + label:before {
     opacity: 1;
 }
 
-.carbox-overlap-wrapper {
+.placebox-overlap-wrapper {
     visibility: hidden;
     background: rgba(0, 0, 0, 0.6);
     height: 100%;
@@ -2154,7 +2154,7 @@ input[type=checkbox]:checked + label:before {
     transform: translateY(-50%);
 }
 
-.carbox-overlap-wrapper h2 {
+.placebox-overlap-wrapper h2 {
     font-size: 16px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
@@ -2164,7 +2164,7 @@ input[type=checkbox]:checked + label:before {
     color: #fff;
 }
 
-.carbox-overlap-wrapper h4 {
+.placebox-overlap-wrapper h4 {
     font-size: 16px;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
@@ -2176,7 +2176,7 @@ input[type=checkbox]:checked + label:before {
     display: inline-block;
 }
 
-.tour-thumbnail:hover > .carbox-overlap-wrapper {
+.tour-thumbnail:hover > .placebox-overlap-wrapper {
     visibility: visible;
     top: 0;
     cursor: pointer;
@@ -2215,35 +2215,35 @@ input[type=checkbox]:checked + label:before {
     transition: .5s;
 }
 
-.car-box img{
+.tour-box img{
     border-radius: 5px;
 }
 
-.car-box .detail .title {
+.tour-box .detail .title {
     font-size: 20px;
     margin-bottom: 10px;
     font-weight: 500;
 }
 
-.car-box .detail .title a:hover {
+.tour-box .detail .title a:hover {
     color: #343a40;
 }
 
-.car-box .detail .location {
+.tour-box .detail .location {
     margin-bottom: 10px;
     font-size: 15px;
     font-weight: 400;
 }
 
-.car-box .detail .location a{
+.tour-box .detail .location a{
     color: #5f5e5e;
 }
 
-.car-box .detail{
+.tour-box .detail{
     padding: 25px 20px 10px;
 }
 
-.car-box .facilities-list {
+.tour-box .facilities-list {
     position: absolute;
     bottom: 0;
     font-size: 15px;
@@ -2254,24 +2254,24 @@ input[type=checkbox]:checked + label:before {
     background: rgba(0, 0, 0, 0.36);
 }
 
-.car-box .footer {
+.tour-box .footer {
     border-top: 1px solid #e5e5e5;
     background: #fff;
     font-size: 14px;
 }
 
-.car-box .footer .ratings {
+.tour-box .footer .ratings {
     font-size: 15px;
     color: orange;
 }
 
-.car-box .footer {
+.tour-box .footer {
     color: #535353;
     font-size: 15px;
     border-top: solid 1px #efefef;
 }
 
-.car-box .footer .price{
+.tour-box .footer .price{
     font-weight: 600;
     font-size: 18px;
     padding-right: 20px;
@@ -2279,12 +2279,12 @@ input[type=checkbox]:checked + label:before {
     line-height: 49px;
 }
 
-.car-box .days{
+.tour-box .days{
     line-height: 49px;
     padding-left: 20px;
 }
 
-.car-box .facilities-list li {
+.tour-box .facilities-list li {
     list-style: none;
     float: left;
     width: 33.33%;
@@ -2294,7 +2294,7 @@ input[type=checkbox]:checked + label:before {
     text-align: center;
 }
 
-.car-box .facilities-list li span i{
+.tour-box .facilities-list li span i{
     margin-right: 5px;
 }
 
@@ -2798,7 +2798,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 /** Car box 2 start **/
-.car-box-2 {
+.tour-box-2 {
     background: #fff;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -2806,60 +2806,60 @@ input[type=checkbox]:checked + label:before {
     overflow: hidden;
 }
 
-.car-box-2:hover{
+.tour-box-2:hover{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.car-box-2 .detail .title {
+.tour-box-2 .detail .title {
     font-size: 22px;
     margin-bottom: 10px;
     font-weight: 400;
 }
 
-.car-box-2 .tour-img img{
+.tour-box-2 .tour-img img{
     width: 100%;
 }
 
-.car-box-2 .detail .title a:hover {
+.tour-box-2 .detail .title a:hover {
     color: #343a40;
 }
 
-.car-box-2 .detail .location {
+.tour-box-2 .detail .location {
     margin-bottom: 15px;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.car-box-2 .detail .location a {
+.tour-box-2 .detail .location a {
     color: #5f5e5e;
     font-size: 15px;
     font-weight: 400;
 }
 
-.car-box-2 .price-box {
+.tour-box-2 .price-box {
     bottom: 10px;
 }
 
-.car-box-2 .tag{
+.tour-box-2 .tag{
    left: 30px;
     right: inherit;
 }
 
-.car-box-2 .listing-badges .featured {
+.tour-box-2 .listing-badges .featured {
     left: -51px;
 }
 
-.car-box-2 .listing-time {
+.tour-box-2 .listing-time {
     position: absolute;
     z-index: 9;
     top: 8px;
     left: 30px;
 }
 
-.car-box-2 .detail{
+.tour-box-2 .detail{
     padding: 0 45px 0 30px;
 }
 
-.car-box-2 .facilities-list li {
+.tour-box-2 .facilities-list li {
     list-style: none;
     float: left;
     margin: 0 3px 3px 0;
@@ -2870,17 +2870,17 @@ input[type=checkbox]:checked + label:before {
     border-radius: 3px;
 }
 
-.car-box-2 .facilities-list li i {
+.tour-box-2 .facilities-list li i {
     font-size: 15px;
     font-weight: 500;
 }
 
-.car-box-2 .tag-2 {
+.tour-box-2 .tag-2 {
     left: -50px;
     top: 20px;
 }
 
-.car-box-2 .price-box-2 {
+.tour-box-2 .price-box-2 {
     bottom: 5px;
     right: 20px;
     z-index: 998;
@@ -3019,7 +3019,7 @@ input[type=checkbox]:checked + label:before {
     padding-left: 20px;
 }
 
-.car-box-2 .for {
+.tour-box-2 .for {
     position: absolute;
     top: 20px;
     left: 35px;
@@ -8121,7 +8121,7 @@ table {
 }
 
 @media all and (min-width: 1200px) {
-    .car-box-2 .footer {
+    .tour-box-2 .footer {
         position: absolute;
         width: 100%;
         bottom: 0;
@@ -8223,11 +8223,11 @@ table {
 
 /** Media **/
 @media (max-width: 1200px) {
-    .car-box-2 .facilities-list li {
+    .tour-box-2 .facilities-list li {
         padding: 3px 10px;
     }
 
-    .car-box-2 .detail {
+    .tour-box-2 .detail {
         padding: 0 35px 0 20px;
     }
 
@@ -8726,7 +8726,7 @@ table {
         top: 22px;
     }
 
-    .car-box-2 .detail{
+    .tour-box-2 .detail{
         padding: 25px 35px 20px 25px;
     }
 
@@ -9093,7 +9093,7 @@ table {
         padding: 20px;
     }
 
-    .car-box-2 .detail{
+    .tour-box-2 .detail{
         padding: 25px 35px 20px 35px;
     }
 
@@ -9305,7 +9305,7 @@ table {
         overflow: hidden;
     }
 
-    .car-box-2 .price-box{
+    .tour-box-2 .price-box{
         right: 30px;
     }
 
@@ -9374,11 +9374,11 @@ table {
         font-size: 17px;
     }
 
-    .car-box-2 .footer {
+    .tour-box-2 .footer {
         padding: 15px 35px 15px 35px;
     }
 
-    .car-box-2 .hdg {
+    .tour-box-2 .hdg {
         padding: 20px 35px;
     }
 
@@ -9407,11 +9407,11 @@ table {
         margin-bottom: 20px;
     }
 
-    .banner-car-box .meta ul li {
+    .banner-tour-box .meta ul li {
         margin-right: 15px;
     }
 
-    .banner-car-box  .mb-30 {
+    .banner-tour-box  .mb-30 {
         margin-bottom: 20px;
     }
 
@@ -9699,7 +9699,7 @@ table {
         display: none;
     }*/
 
-    .banner-car-box .meta ul li i {
+    .banner-tour-box .meta ul li i {
         margin-right: 5px;
     }
 
@@ -9763,7 +9763,7 @@ input, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
     width: 75% !important;
 }
 
-.car-box .footer .cartype{
+.tour-box .footer .tourtype{
     font-weight: 600;
     font-size: 18px;
     padding-right: 20px;
@@ -9771,7 +9771,7 @@ input, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
     line-height: 49px;
     color: #f0151f;
 }
-.ratings-2 .cartype{
+.ratings-2 .tourtype{
     font-weight: 600;
     font-size: 18px;
     padding-right: 20px;

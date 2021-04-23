@@ -70,7 +70,7 @@
 <!-- Search box 3 end -->
 
 <!-- Featured place start -->
-<div class="featured-car content-area">
+<div class="featured-tour content-area">
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
@@ -80,7 +80,7 @@
         <div class="row">
             {% for place in places %}
             <div class="col-lg-4 col-md-6">
-                <div class="car-box">
+                <div class="tour-box">
                     <div class="tour-thumbnail">
                         <a href="{% url 'place_detail' place.id %}" class="tour-img">
                             <div class="tag">Latest</div>
@@ -93,7 +93,7 @@
                                 </ul>
                             </div>
                         </a>
-                        <div class="carbox-overlap-wrapper">
+                        <div class="placebox-overlap-wrapper">
                             <div class="overlap-box">
                                 <div class="overlap-btns-area">
                                     <div class="car-magnify-gallery">
@@ -131,7 +131,7 @@
                     </div>
                     <div class="footer clearfix">
                         <div class="pull-left ratings days">
-                            <p class="cartype">{{place.one_strong_point_for_recommendations}}</p>
+                            <p class="tourtype">{{place.one_strong_point_for_recommendations}}</p>
                         </div>
                     </div>
                 </div>
