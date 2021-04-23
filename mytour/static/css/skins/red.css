@@ -53,7 +53,7 @@
     color: #f0151f;
 }
 
-.car-box .facilities-list li span i{
+.tour-box .facilities-list li span i{
     color: #f0151f;
 }
 
@@ -85,7 +85,7 @@
     color: #f0151f;
 }
 
-.car-box-5 .facilities-list li i{
+.tour-box-5 .facilities-list li i{
     color: #f0151f;
 }
 
@@ -97,15 +97,15 @@
     color: #f0151f;
 }
 
-.car-box .footer ul li a:hover{
+.tour-box .footer ul li a:hover{
     color: #f0151f;
 }
 
-.car-model-2 .ratings-2 span{
+.tour-model-2 .ratings-2 span{
     background: #f0151f;
 }
 
-.car-box-3 .footer ul li a:hover{
+.tour-box-3 .footer ul li a:hover{
     color: #f0151f;
 }
 
@@ -120,7 +120,7 @@
     color: #fff;
 }
 
-.car-box-2 .facilities-list li i{
+.tour-box-2 .facilities-list li i{
     color: #f0151f;
 }
 
@@ -130,7 +130,7 @@
     color: #fff;
 }
 
-.car-model-2 .price-box .del-2 {
+.tour-model-2 .price-box .del-2 {
     color: #f0151f;
 }
 
@@ -284,7 +284,7 @@ input[type=checkbox]:checked + label:before {
     border: solid 2px#f0151f;
 }
 
-.car-amenities ul li i {
+.tour-amenities ul li i {
     color:#f0151f;
 }
 
@@ -297,7 +297,7 @@ input[type=checkbox]:checked + label:before {
     color:#f0151f;
 }
 
-.car-model-2 .modal-right-content h3{
+.tour-model-2 .modal-right-content h3{
     color:#f0151f;
 }
 
@@ -433,7 +433,7 @@ footer .footer-item .contact-info li label a:hover {
     color:#f0151f;
 }
 
-.car-box .footer .price{
+.tour-box .footer .price{
     color:#f0151f;
 }
 
@@ -573,7 +573,7 @@ li.active.filtr-button.filtr a{
     background: #f0151f;
 }
 
-.car-box-5 .detail .title a {
+.tour-box-5 .detail .title a {
     color:#f0151f;
 }
 
@@ -660,7 +660,7 @@ li.active.filtr-button.filtr a{
     background:#f0151f;
 }
 
-.car-box-2 .detail .title a {
+.tour-box-2 .detail .title a {
     color:#f0151f;
 }
 
@@ -720,7 +720,7 @@ li.active.filtr-button.filtr a{
         color:#f0151f!important;
     }
 
-    .car-model-2 .modal-header {
+    .tour-model-2 .modal-header {
         background: #f0151f;
         padding: 20px 20px 10px;
     }

@@ -1563,7 +1563,7 @@ input[type=checkbox]:checked + label:before {
     padding: 0 7.5px 0;
 }
 
-.cars{
+.tours{
     padding: 0 7.5px 0;
 }
 .overview-box p {
@@ -2110,7 +2110,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 /** Property box start **/
-.car-box {
+.tour-box {
     position: relative;
     margin-bottom: 30px;
     background: #fff;
@@ -2215,35 +2215,35 @@ input[type=checkbox]:checked + label:before {
     transition: .5s;
 }
 
-.car-box img{
+.tour-box img{
     border-radius: 5px;
 }
 
-.car-box .detail .title {
+.tour-box .detail .title {
     font-size: 20px;
     margin-bottom: 10px;
     font-weight: 500;
 }
 
-.car-box .detail .title a:hover {
+.tour-box .detail .title a:hover {
     color: #343a40;
 }
 
-.car-box .detail .location {
+.tour-box .detail .location {
     margin-bottom: 10px;
     font-size: 15px;
     font-weight: 400;
 }
 
-.car-box .detail .location a{
+.tour-box .detail .location a{
     color: #5f5e5e;
 }
 
-.car-box .detail{
+.tour-box .detail{
     padding: 25px 20px 10px;
 }
 
-.car-box .facilities-list {
+.tour-box .facilities-list {
     position: absolute;
     bottom: 0;
     font-size: 15px;
@@ -2254,24 +2254,24 @@ input[type=checkbox]:checked + label:before {
     background: rgba(0, 0, 0, 0.36);
 }
 
-.car-box .footer {
+.tour-box .footer {
     border-top: 1px solid #e5e5e5;
     background: #fff;
     font-size: 14px;
 }
 
-.car-box .footer .ratings {
+.tour-box .footer .ratings {
     font-size: 15px;
     color: orange;
 }
 
-.car-box .footer {
+.tour-box .footer {
     color: #535353;
     font-size: 15px;
     border-top: solid 1px #efefef;
 }
 
-.car-box .footer .price{
+.tour-box .footer .price{
     font-weight: 600;
     font-size: 18px;
     padding-right: 20px;
@@ -2279,12 +2279,12 @@ input[type=checkbox]:checked + label:before {
     line-height: 49px;
 }
 
-.car-box .days{
+.tour-box .days{
     line-height: 49px;
     padding-left: 20px;
 }
 
-.car-box .facilities-list li {
+.tour-box .facilities-list li {
     list-style: none;
     float: left;
     width: 33.33%;
@@ -2294,52 +2294,52 @@ input[type=checkbox]:checked + label:before {
     text-align: center;
 }
 
-.car-box .facilities-list li span i{
+.tour-box .facilities-list li span i{
     margin-right: 5px;
 }
 
 /** MODAL BODY DESIGN STARTED**/
-.car-model-2 .modal-raw {
+.tour-model-2 .modal-raw {
     display: flex;
     background: #fff;
 }
 
-.car-model-2 .modal-left, .modal-right {
+.tour-model-2 .modal-left, .modal-right {
     flex: 1;
 }
 
-.car-model-2 .car-modal .modal-left {
+.tour-model-2 .tour-modal .modal-left {
     padding: 0;
     background: #535353;
     color: #fff;
 }
 
-.car-model-2 .car-modal .modal-content {
+.tour-model-2 .tour-modal .modal-content {
     border: none;
     background: transparent;
     box-shadow: none;
     border-radius: 0;
 }
 
-.car-model-2 .car-modal .modal-header {
+.tour-model-2 .tour-modal .modal-header {
     background: transparent;
     border: none;
     padding: 15px 0;
 }
 
-.car-model-2 .car-modal .modal-header .modal-title {
+.tour-model-2 .tour-modal .modal-header .modal-title {
     font-size: 25px;
     font-weight: 600;
     color: #fff;
 }
 
-.car-model-2 .car-modal .modal-header p {
+.tour-model-2 .tour-modal .modal-header p {
     color: #fff;
     margin-bottom: 0;
 }
 
-.car-model-2 .car-modal .modal-header .close,
-.car-modal .modal-header .close:focus {
+.tour-model-2 .tour-modal .modal-header .close,
+.tour-modal .modal-header .close:focus {
     padding: 8px 13px;
     outline: none;
     margin: -60px -1px -15px auto;
@@ -2350,16 +2350,16 @@ input[type=checkbox]:checked + label:before {
     cursor: pointer;
 }
 
-.car-model-2 .car-modal .modal-body {
+.tour-model-2 .tour-modal .modal-body {
     padding: 0 15px;
     background: #fff;
 }
 
-.car-model-2 .modal-right {
+.tour-model-2 .modal-right {
     padding: 0;
 }
 
-.car-model-2 .modal-left{
+.tour-model-2 .modal-left{
     padding: 0;
 }
 
@@ -2367,16 +2367,16 @@ input[type=checkbox]:checked + label:before {
     max-height: 240px;
 }
 
-.car-model-2 .modal-left-content {
+.tour-model-2 .modal-left-content {
     background: #fff;
 }
 
-.car-model-2 .modal-left-content img {
+.tour-model-2 .modal-left-content img {
     width: 100%!important;
     height: 100%!important;
 }
 
-.car-model-2 .modal-left-content .control {
+.tour-model-2 .modal-left-content .control {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -2388,54 +2388,54 @@ input[type=checkbox]:checked + label:before {
     opacity: .5;
 }
 
-.car-model-2 .modal-left-content .carousel-inner {
+.tour-model-2 .modal-left-content .carousel-inner {
     display: flex;
 }
 
-.car-model-2 .modal-left-content .carousel-inner .item {
+.tour-model-2 .modal-left-content .carousel-inner .item {
     flex: 1;
     width: 100%;
 }
 
-.car-model-2 .modal-left-content .carousel-inner .item img{
+.tour-model-2 .modal-left-content .carousel-inner .item img{
     width: 100%;
 }
 
-.car-model-2 .modal-left-content iframe {
+.tour-model-2 .modal-left-content iframe {
     border: none;
     width: 100%;
     display: block;
 }
 
-.car-model-2 .modal-left-content .control:hover {
+.tour-model-2 .modal-left-content .control:hover {
     opacity: 1;
 }
 
-.car-model-2 .modal-left-content .control-prev {
+.tour-model-2 .modal-left-content .control-prev {
     right: 30px;
 }
 
-.car-model-2 .modal-left-content .control-next {
+.tour-model-2 .modal-left-content .control-next {
     right: 0;
 }
 
-.car-model-2 .modal-left-content .description {
+.tour-model-2 .modal-left-content .description {
     padding: 30px 30px 45px;
 }
 
-.car-model-2 .modal-left-content p {
+.tour-model-2 .modal-left-content p {
     font-size: 15px;
     line-height: 25px;
     margin-bottom: 0;
 }
 
-.car-model-2 .modal-left-content .description h3 {
+.tour-model-2 .modal-left-content .description h3 {
     font-size: 20px;
     margin: 0 0 15px;
     font-weight: 600;
 }
 
-.car-model-2 .modal-right-content .bullets {
+.tour-model-2 .modal-right-content .bullets {
     color: #535353;
     font-size: 15px;
     font-weight: 400;
@@ -2444,25 +2444,25 @@ input[type=checkbox]:checked + label:before {
     columns: 2;
 }
 
-.car-model-2 .modal-right-content .bullets li {
+.tour-model-2 .modal-right-content .bullets li {
     margin-bottom: 5px;
     position: relative;
     list-style: none;
     padding-left: 0;
 }
 
-.car-model-2 .modal-right-content .bullets li i {
+.tour-model-2 .modal-right-content .bullets li i {
     left: 0;
     position: absolute;
     top: 0;
 }
 
-.car-model-2 .modal-right-content {
+.tour-model-2 .modal-right-content {
     padding: 30px;
     background: #fff;
 }
 
-.car-model-2 .modal-body {
+.tour-model-2 .modal-body {
     position: relative;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
@@ -2470,77 +2470,77 @@ input[type=checkbox]:checked + label:before {
     padding: 0 15px 20px;
 }
 
-.car-model-2 .modal-backdrop.show {
+.tour-model-2 .modal-backdrop.show {
     opacity: 0.7;
 }
 
-.car-model-2 .modal-header {
+.tour-model-2 .modal-header {
     background: transparent;
     border: none;
     padding: 5px 0;
 }
 
-.car-model-2 .modal-content {
+.tour-model-2 .modal-content {
     background-color: transparent;
     border: none;
     border-radius: 0;
 }
 
-.car-model-2 .modal-right-content h3 {
+.tour-model-2 .modal-right-content h3 {
     font-size: 20px;
     font-weight: 400;
     margin: 0 0 15px;
 }
 
-.car-model-2 .modal-right-content dl {
+.tour-model-2 .modal-right-content dl {
     margin-bottom: 20px;
     font-size: 14px;
     color: #535353;
 }
 
-.car-model-2 .modal-right-content dl dt {
+.tour-model-2 .modal-right-content dl dt {
     float: left;
     font-weight: 500;
 }
 
-.car-model-2 .modal-right-content dl dd {
+.tour-model-2 .modal-right-content dl dd {
     text-align: right;
     margin-bottom: 8px;
 }
 
-.car-model-2 .modal{
+.tour-model-2 .modal{
     z-index: 9999;
 }
 
-.car-model-2 .ratings-box {
+.tour-model-2 .ratings-box {
     margin-right: 4px;
     padding: 4px 10px;
     color: #fff;
     border-radius: 3px;
 }
 
-.car-model-2 .ratings-box {
+.tour-model-2 .ratings-box {
     color: #fff!important;
 }
 
-.car-model-2 .ratings-2 i {
+.tour-model-2 .ratings-2 i {
     color: orange;
 }
 
-.car-model-2 .ratings-2{
+.tour-model-2 .ratings-2{
     font-size: 14px;
     color: #fff!important;
     font-weight: 400;
 }
 
-.car-model-2 .modal-body .btn-md {
+.tour-model-2 .modal-body .btn-md {
     padding: 9px 25px 7px 25px;
     letter-spacing: 1px;
     font-size: 13px;
     border-radius: 3px;
 }
 
-.car-model-2 h4{
+.tour-model-2 h4{
     color: #fff;
     font-weight: 400;
 }
@@ -2549,22 +2549,22 @@ input[type=checkbox]:checked + label:before {
     display: none;
 }
 
-.car-model-2 h5{
+.tour-model-2 h5{
     font-size: 15px;
     color: #fff;
 }
 
-.car-model-2 .item{
+.tour-model-2 .item{
     position: relative;
 }
 
-.car-model-2 .sobuz {
+.tour-model-2 .sobuz {
     position: absolute;
     bottom: 30px;
     left: 30px;
 }
 
-.car-model-2 .close{
+.tour-model-2 .close{
     opacity: 1!important;
     background: #fff;
     color: #000;
@@ -2576,11 +2576,11 @@ input[type=checkbox]:checked + label:before {
     margin: 0;
 }
 
-.car-model-2 .modal-dialog {
+.tour-model-2 .modal-dialog {
     margin: 10px auto;
 }
 
-.car-model-2 .price-box {
+.tour-model-2 .price-box {
     text-align: left;
     font-size: 25px;
     position: inherit;
@@ -2591,7 +2591,7 @@ input[type=checkbox]:checked + label:before {
     font-family: 'Roboto', sans-serif;
 }
 
-.car-model-2 img{
+.tour-model-2 img{
     width: 100%;
 }
 /** MODAL BODY DESIGN ENDED **/
@@ -2798,7 +2798,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 /** Car box 2 start **/
-.car-box-2 {
+.tour-box-2 {
     background: #fff;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -2806,60 +2806,60 @@ input[type=checkbox]:checked + label:before {
     overflow: hidden;
 }
 
-.car-box-2:hover{
+.tour-box-2:hover{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.car-box-2 .detail .title {
+.tour-box-2 .detail .title {
     font-size: 22px;
     margin-bottom: 10px;
     font-weight: 400;
 }
 
-.car-box-2 .tour-img img{
+.tour-box-2 .tour-img img{
     width: 100%;
 }
 
-.car-box-2 .detail .title a:hover {
+.tour-box-2 .detail .title a:hover {
     color: #343a40;
 }
 
-.car-box-2 .detail .location {
+.tour-box-2 .detail .location {
     margin-bottom: 15px;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.car-box-2 .detail .location a {
+.tour-box-2 .detail .location a {
     color: #5f5e5e;
     font-size: 15px;
     font-weight: 400;
 }
 
-.car-box-2 .price-box {
+.tour-box-2 .price-box {
     bottom: 10px;
 }
 
-.car-box-2 .tag{
+.tour-box-2 .tag{
    left: 30px;
     right: inherit;
 }
 
-.car-box-2 .listing-badges .featured {
+.tour-box-2 .listing-badges .featured {
     left: -51px;
 }
 
-.car-box-2 .listing-time {
+.tour-box-2 .listing-time {
     position: absolute;
     z-index: 9;
     top: 8px;
     left: 30px;
 }
 
-.car-box-2 .detail{
+.tour-box-2 .detail{
     padding: 0 45px 0 30px;
 }
 
-.car-box-2 .facilities-list li {
+.tour-box-2 .facilities-list li {
     list-style: none;
     float: left;
     margin: 0 3px 3px 0;
@@ -2870,17 +2870,17 @@ input[type=checkbox]:checked + label:before {
     border-radius: 3px;
 }
 
-.car-box-2 .facilities-list li i {
+.tour-box-2 .facilities-list li i {
     font-size: 15px;
     font-weight: 500;
 }
 
-.car-box-2 .tag-2 {
+.tour-box-2 .tag-2 {
     left: -50px;
     top: 20px;
 }
 
-.car-box-2 .price-box-2 {
+.tour-box-2 .price-box-2 {
     bottom: 5px;
     right: 20px;
     z-index: 998;
@@ -3019,7 +3019,7 @@ input[type=checkbox]:checked + label:before {
     padding-left: 20px;
 }
 
-.car-box-2 .for {
+.tour-box-2 .for {
     position: absolute;
     top: 20px;
     left: 35px;
@@ -3030,7 +3030,7 @@ input[type=checkbox]:checked + label:before {
     right: inherit;
 }
 
-/** Featured car 4 start**/
+/** Featured place 4 start**/
 .featured-place-4 .carousel-item {
     margin-bottom: 30px;
 }
@@ -6661,7 +6661,7 @@ footer {
 }
 
 /** Car amenities start **/
-.car-amenities ul li {
+.tour-amenities ul li {
     margin-bottom: 15px;
     font-size: 15px;
     padding-left: 27px;
@@ -6669,7 +6669,7 @@ footer {
     font-weight: 500;
 }
 
-.car-amenities ul li i {
+.tour-amenities ul li i {
     left: 0;
     position: absolute;
     top: 3px;
@@ -6706,34 +6706,34 @@ footer {
     border: none;
 }
 
-/** Heading car start **/
-.heading-car{
+/** Heading tour start **/
+.heading-tour{
     margin-bottom: 20px;
 }
 
-.heading-car h3{
+.heading-tour h3{
     font-weight: 500;
     font-size: 25px;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
-.heading-car h6{
+.heading-tour h6{
     font-size: 15px;
     margin-bottom: 0;
     color: #535353;
 }
 
-.heading-car h6 i{
+.heading-tour h6 i{
     margin-right: 3px;
 }
 
-.heading-car h3 span{
+.heading-tour h3 span{
     float: right;
     margin-bottom: 5px;
 }
 
-.heading-car .ratings-2{
+.heading-tour .ratings-2{
     float: right;
 }
 
@@ -8121,7 +8121,7 @@ table {
 }
 
 @media all and (min-width: 1200px) {
-    .car-box-2 .footer {
+    .tour-box-2 .footer {
         position: absolute;
         width: 100%;
         bottom: 0;
@@ -8223,11 +8223,11 @@ table {
 
 /** Media **/
 @media (max-width: 1200px) {
-    .car-box-2 .facilities-list li {
+    .tour-box-2 .facilities-list li {
         padding: 3px 10px;
     }
 
-    .car-box-2 .detail {
+    .tour-box-2 .detail {
         padding: 0 35px 0 20px;
     }
 
@@ -8419,20 +8419,20 @@ table {
         line-height: 45px;
     }
 
-    .car-model-2 .modal-right-content {
+    .tour-model-2 .modal-right-content {
         padding: 30px 30px 0;
     }
 
-    .car-model-2 .modal-left, .modal-right {
+    .tour-model-2 .modal-left, .modal-right {
         flex: inherit;
     }
 
-    .car-model-2 .modal-body {
+    .tour-model-2 .modal-body {
         background: #fff;
         padding: 0 15px 30px;
     }
 
-    .car-model-2 .modal-left-content .description {
+    .tour-model-2 .modal-left-content .description {
         padding: 30px 30px 0;
     }
 
@@ -8588,7 +8588,7 @@ table {
         padding-left: 0;
     }
 
-    .car-model-2 h4 {
+    .tour-model-2 h4 {
        font-size: 20px;
     }
 
@@ -8726,7 +8726,7 @@ table {
         top: 22px;
     }
 
-    .car-box-2 .detail{
+    .tour-box-2 .detail{
         padding: 25px 35px 20px 25px;
     }
 
@@ -9093,7 +9093,7 @@ table {
         padding: 20px;
     }
 
-    .car-box-2 .detail{
+    .tour-box-2 .detail{
         padding: 25px 35px 20px 35px;
     }
 
@@ -9131,7 +9131,7 @@ table {
         top: 50%;
     }
 
-    .heading-car h3{
+    .heading-tour h3{
         font-size: 22px;
     }
 
@@ -9258,7 +9258,7 @@ table {
         border-bottom: transparent;
     }
 
-    .cars{
+    .tours{
         padding: 0;
     }
 
@@ -9305,7 +9305,7 @@ table {
         overflow: hidden;
     }
 
-    .car-box-2 .price-box{
+    .tour-box-2 .price-box{
         right: 30px;
     }
 
@@ -9374,11 +9374,11 @@ table {
         font-size: 17px;
     }
 
-    .car-box-2 .footer {
+    .tour-box-2 .footer {
         padding: 15px 35px 15px 35px;
     }
 
-    .car-box-2 .hdg {
+    .tour-box-2 .hdg {
         padding: 20px 35px;
     }
 
@@ -9407,11 +9407,11 @@ table {
         margin-bottom: 20px;
     }
 
-    .banner-car-box .meta ul li {
+    .banner-tour-box .meta ul li {
         margin-right: 15px;
     }
 
-    .banner-car-box  .mb-30 {
+    .banner-tour-box  .mb-30 {
         margin-bottom: 20px;
     }
 
@@ -9631,16 +9631,16 @@ table {
         max-width: 100%;
     }
 
-    .car-amenities ul li {
+    .tour-amenities ul li {
         list-style: none;
         margin-bottom: 10px;
     }
 
-    .heading-car p{
+    .heading-tour p{
         font-size: 13px;
     }
 
-    .heading-car h5{
+    .heading-tour h5{
         font-size: 13px;
     }
 
@@ -9664,21 +9664,21 @@ table {
         display: none;
     }
 
-    .heading-car .pull-left{
+    .heading-tour .pull-left{
         display: inline-block;
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .heading-car .pull-right{
+    .heading-tour .pull-right{
         float: left;
     }
 
-    .heading-car .price-box-3 {
+    .heading-tour .price-box-3 {
         font-size: 20px;
     }
 
-    .heading-car .price-box-3 sup {
+    .heading-tour .price-box-3 sup {
         top: -15px;
     }
 
@@ -9699,7 +9699,7 @@ table {
         display: none;
     }*/
 
-    .banner-car-box .meta ul li i {
+    .banner-tour-box .meta ul li i {
         margin-right: 5px;
     }
 
@@ -9720,7 +9720,7 @@ table {
         display: none;
     }
 
-    .heading-car h3 span{
+    .heading-tour h3 span{
         float: left;
     }
 }
@@ -9763,7 +9763,7 @@ input, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
     width: 75% !important;
 }
 
-.car-box .footer .cartype{
+.tour-box .footer .tourtype{
     font-weight: 600;
     font-size: 18px;
     padding-right: 20px;
@@ -9771,7 +9771,7 @@ input, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
     line-height: 49px;
     color: #f0151f;
 }
-.ratings-2 .cartype{
+.ratings-2 .tourtype{
     font-weight: 600;
     font-size: 18px;
     padding-right: 20px;

@@ -137,7 +137,7 @@
         <div class="row">
             {% for place in recommended_place %}
             <div class="col-lg-4 col-md-6">
-                <div class="car-box">
+                <div class="tour-box">
                     <div class="tour-thumbnail">
                         <a href="{% url 'place_detail' place.id %}" class="tour-img">
                             <div class="tag">Latest</div>
@@ -184,7 +184,7 @@
                     </div>
                     <div class="footer clearfix">
                         <div class="pull-left ratings days">
-                            <p class="cartype">{{place.one_strong_point_for_recommendations}}</p>
+                            <p class="tourtype">{{place.one_strong_point_for_recommendations}}</p>
                         </div>
                     </div>
                 </div>
@@ -211,9 +211,7 @@
                 <div class="slick-slide-item">
                     <div class="team-1">
                         <div class="photo">
-                            <a href="#">
                                 <img src="{{team.photo.url}}" alt="team-1" class="img-fluid">
-                            </a>
                             <div class="social-list clearfix">
                                 <a href="{{team.facebook_link}}" target='_blank' class="facebook-bg"><i class="fa fa-facebook"></i></a>
                                 <a href="{{team.twitter_link}}" target='_blank' class="twitter-bg"><i class="fa fa-twitter"></i></a>
@@ -221,7 +219,7 @@
                             </div>
                         </div>
                         <div class="details">
-                            <h4><a href="team-detail.html">{{team.first_name}} {{team.last_name}}</a></h4>
+                            <h4>{{team.first_name}} {{team.last_name}}</h4>
                             <h5>{{team.designation}}</h5>
                         </div>
                     </div>
