@@ -1,3 +1,23 @@
+0. Steps to run this project in pc:
+	
+	1. Download the zip file from the github
+	2. Open the root folder(mytour) in vs code.
+		file->open folder->select folder from location
+	3. Open new terminal
+		terminal->new terminal
+	4. Activate virtual env in your terminal
+		source env/Scripts/activate
+	5. Run server 
+		python manage.py runserver
+	6. Open your browser and type http://127.0.0.1:8000/ in your address and enter
+
+	7. In the same address bar type http://127.0.0.1:8000/admin and enter for admin access
+		username: djangoadmin
+		password: mytour@123
+	Note : Before entering any commands.
+		Go to mytour file -> settings.py -> line 97-> password->'mytour@123'
+		Go to mytour file -> settings.py -> line 160-> password->'Gaurav@123'
+
 1. Initially, i used git bash for the creation of related files inside the project.
 	i) here i have created a vitual environment(env) from git shell for the installing of all the required packages on further 	proceding of the project.
 	
@@ -69,4 +89,9 @@ a
 	Now after successfully setup my site application from django-admin panel, now its time to change href for facebook and google from login.html.(here i used a method js_sdk, because this method enable us to login facebook through same webpage opening in current window, another method name "oauth2", it will redirect us to new window for current login.)
 
 20. Now, its time to work on contact/query form, when ever user create a query admin will get a mail, for that i need a seperate app. So, i will create my app from cmd, registered this app in settings.py file of root project, create a urls.py and all. Now, all i need to make a model for contact (i need 12 attributes from here see models.py for more details), also i'am checking, if user has already made a inquiry for a place, then for that i give them an alert message. Now its time for us to give admin an alert message whenever user made an inquiry for a place.
+
+21. Deployment Phase: before deployment i need to take a backup of my database in json format: 
+	for that i need to run this command(known as dump command) : python manage.py dumbdata --natural-foreign --natural-primary -e contenttype -e auth.Permission --indent 4 > project_dump.json
+
+22. 
  
