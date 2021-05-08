@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %} | add post {% endblock  %}
+{% block content %}
+{% load static %}
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1></h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Add Post</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Contact 2 start -->
+<div class="contact-2 content-area-5">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title text-center">
+            <h1>Add <span>Post</span></h1>
+        </div>
+
+        <form action="{% url 'addpost' %}" method='POST' enctype="multipart/form-data">
+            {% include 'includes/messages.html' %}
+            {% csrf_token %}
+            {% if user.is_authenticated %}
+            <input type="hidden" name="user_id" value="{{user.id}}">
+            {% else %}
+            <input type="hidden" name="user_id" value="0">
+            {% endif %}
+            <div class="row ">
+                <div class="tex-center">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <div class="form-group name">
+                                <input type="text" name="author" class="form-control" placeholder="Author"
+                                    {% if user.is_authenticated %} value="{{user.first_name}}" {% endif %} readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group name">
+                                <input type="text" name="title" class="form-control" placeholder="title" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group name">
+                                <input type="text" name="location" class="form-control" placeholder="location" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group name">
+                                <input type="text" name="short_desc" class="form-control"
+                                    placeholder="Write short description" required/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group message">
+                                <textarea class="form-control" name="full_desc"
+                                    placeholder="Write full description"></textarea>
+                            </div>
+                        </div>
+                        <input type="file" id="myFile" name="place_photo" required/>
+                        <div class="col-md-12">
+                            <div class="send-btn text-center">
+                                <input type="submit" class="btn btn-outline-success mr-1" value="Send Post">
+                                <a href="{% url 'dashboard' %}" class="btn btn-outline-danger">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Contact 2 end -->
+{%endblock content%}

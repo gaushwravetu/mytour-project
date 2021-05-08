@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %} | search {% endblock  %}
+{% block content %}
+{% load static %}
+
+<!-- Banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Search Results</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Search</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Banner end -->
+
+<!-- Search box 3 start -->
+<div class="search-box-3 sb-7 bg-active">
+    <div class="container">
+        <div class="search-area-inner">
+            <div class="search-contents">
+                <form method="GET">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                            <div class="form-group">
+                                <select class="selectpicker search-fields" name="location">
+                                    <option disabled="disabled" selected="selected">Select Location</option>
+                                    {% for location in location_search %}
+                                    <option value="{{location}}">{{location}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                            <div class="form-group">
+                                <button class="btn btn-block button-theme btn-md">
+                                    <i class="fa fa-search"></i>Find
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search box 3 end -->
+
+<!-- Featured place start -->
+<div class="featured-tour content-area">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Here's your <span>Blog Posts</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-lg-4 col-md-6">
+                <div class="tour-box">
+                    <div class="tour-thumbnail">
+                        <a href="{% url 'community_detail' post.id %}" class="tour-img">
+                            <div class="tag">posted by {{post.author}}</div>
+                            <img class="card-img-top" src="{{post.place_photo.url}}" alt="Photo Unavailable">
+                            <div class="facilities-list clearfix">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.google.com/maps/place/{{post.location}}" target="_blank">
+                                            <i class="flaticon-pin"></i><span> {{post.location}}</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <h1 class="title">
+                            {{post.title}}
+                        </h1>
+                        <p>
+                            {{post.short_desc}}<a href="{% url 'community_detail' post.id %}"><span>.....read more</span></a>
+                        </p>
+                        <div class="view-all">
+                            <a href="{% url 'community_detail' post.id %}" class="btn btn-outline-success">View Post</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Featured place end -->
+
+{% endblock %}

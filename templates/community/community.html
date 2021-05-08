@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block title %} | community {% endblock  %}
+{% block content %}
+{% load static %}
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1></h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Community</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Services start -->
+<div class="services content-area">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title text-center">
+            <h1>Our <span>Community</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    {% for post in posts %}
+                    {% comment %} <div class="col-lg-6 col-md-6" name='redirect'>
+                        <div class="tour-box-3">
+                            <div class="tour-thumbnail">
+                                <a href="{% url 'community_detail' post.id %}" class="tour-img">
+                                    <div class="tag-2 bg-active"></div>
+                                    <img class="d-block w-100" src="{{post.place_photo.url}}" alt="Place">
+                                </a>
+                            </div>
+                            <div class="detail read-more">
+                                <h1 class="title">
+                                    {{post.title}}
+                                </h1>
+                                {{post.short_desc}}<span class="ellipsis">...</span> <a class="more"
+                                    href="{% url 'community_detail' post.id %}">read more</a>
+                            </div>
+                            <div class="text-center">
+                                <a href="{% url 'community_detail' post.id %}" class="btn btn-info">View Post</a>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+
+
+
+                    <div class="card  mb-4 card-hover">
+                        <a href="{% url 'community_detail' post.id %}" class="card-img-top"><img
+                                src="{{post.place_photo.url}}" alt="Photo Unavailable"
+                                class="rounded-top card-img-top"></a>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="mb-2 text-truncate-line-2 "><a href="{% url 'community_detail' post.id %}"
+                                    class="text-inherit">{{post.title}}</a></h4>
+                            <!-- List -->
+                            <ul class="mb-3 list-inline">
+                                <li class="list-inline-item">
+                                    {{post.short_desc}}<a href="{% url 'community_detail' post.id %}"><span>.....read more</span></a>
+                                <li>
+                                    <div class="fb-like mt-20" data-href="http://127.0.0.1:8000/community/{{post.id}}" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+                                </li>
+
+                                <li>
+                                    <div class="fb-comments" data-href="http://127.0.0.1:8000/community/{{post.id}}" data-width="" data-numposts="5">
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <!-- Card Footer -->
+                        <div class="card-footer">
+                            <div class="row align-items-center no-gutters">
+                                <div class="col-auto">
+                                    <img src="assets/images/avatar/avatar-2.jpg" class="rounded-circle avatar-xs"
+                                        alt="">
+                                </div>
+                                <div class="col ml-2">
+                                    <span><i class="flaticon-user"></i></span> Posted by<sb> {{post.author}}</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <div class="sidebar-right">
+                    <!-- Advanced search start -->
+                    <div class="widget advanced-search2">
+                        <h3 class="sidebar-title">Search blogs of your desired locations</h3>
+                        <form action="{% url 'searchpost' %}" method="">
+                            <div class="form-group">
+                                <input type="text" name="keyword" placeholder="Search by name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control search-fields" name="location">
+                                    <option selected="true" disabled="disabled">Select Location</option>
+                                    {% for location in location_search %}
+                                    <option value="{{location}}">{{location}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <button class="btn btn-block button-theme btn-md">
+                                <i class="fa fa-search"></i> Search
+                            </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Services end -->
+
+{%endblock content%}

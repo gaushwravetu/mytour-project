@@ -23,8 +23,9 @@
 	{% include 'includes/messages.html' %}
 	<div class="main-title" style="text-align:left !important;">
 		<h1>Welcome <span>{{user.first_name}}</span></h1>
-		<p>Here are the places that you have inquired about</p>
+		<a href="{% url 'addpost' %}" class="btn btn-success">Add Post</a>
 	</div>
+	<p>Here are the places that you have inquired about</p>
 	{% if inquiries %}
 	<table class="table table-hover">
 		<thead>
@@ -41,7 +42,7 @@
 				<td>{{inquiry.place_title}}</td>
 				<td>{{inquiry.customer_need}}</td>
 				<td>{{inquiry.city}}</td>
-				<td><a href="{% url 'place_detail' inquiry.place_id %}" class="btn btn-outline-dark">View Place</a></td>
+				<td><a href="{% url 'place_detail' inquiry.place_id %}" class="btn btn-outline-success">View Place</a></td>
 			</tr>
 			{% endfor %}
 		</tbody>
@@ -49,6 +50,38 @@
 	{% else %}
 	<h4>Your have no inquiries</h4>
 	{% endif %}
+
+	<p>Here are your blog posts</p>
+	{% if posts %}
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th scope="col">Title</th>
+				<th scope="col">Location</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for post in posts %}
+			<tr>
+				<td>{{post.title}}</td>
+				<td>{{post.location}}</td>
+				<td>
+					<a href="{% url 'community_detail' post.id %}" class="btn btn-outline-success">View</a>
+					{% comment %} <a href="{% url 'updatepost' post.id %}" class="btn btn-outline-warning">Edit<a> {% endcomment %}
+					<form action="{% url 'deletepost' post.id %}" method="POST" class="d-inline">
+					{% csrf_token %}
+					<input type="submit" class="btn btn-outline-danger" value="Delete">
+					</form>
+				<td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% else %}
+	<h4>No blog posts</h4>
+	{% endif %}
+
 </div>
 
 <!--   Dashboard End   -->

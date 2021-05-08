@@ -33,6 +33,7 @@ LOGIN_REDIRECT_URL='dashboard'
 # Application definition
 
 INSTALLED_APPS = [
+    'community.apps.CommunityConfig',
     'place.apps.PlaceConfig',
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %} | Blog Detail {% endblock  %}
+{% block content %}
+{% load static %}
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1></h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Blog Detail</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Place details page start -->
+<div class="tour-details-page content-area-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-xs-12">
+                <div class="tour-details-section">
+                    <!-- Heading start -->
+                    <div class="heading-tour clearfix">
+                        <div class="pull-left">
+                            <h3>{{single_post.title}}</h3>
+                            <h6>
+                                {% comment %} <i class="flaticon-pin">{{single_post.location}} by <span>{{single_post.author}}</span></i> {% endcomment %}
+                                <a href="https://www.google.com/maps/place/{{single_post.location}}" target="_blank">
+                                <i class="flaticon-pin">{{single_post.location}}</i>
+                                </a>
+                                - by <span>{{single_post.author}}</span>
+                            </h6>
+                            
+                        </div>
+                    </div>
+                    <div id="tourDetailsSlider" class="carousel tour-details-sliders slide mb-40">
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item carousel-item" data-slide-number="0">
+                                <img src="{{single_post.place_photo.url}}" class="img-fluid" alt="slider-place">
+                            </div>
+                            <div class="fb-like mt-20" data-href="http://127.0.0.1:8000/community/{{single_post.id}}" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+                        </div>
+                    </div>
+                    <!-- Tabbing box start -->
+                    <div class="tabbing tabbing-box mb-30">
+                        <ul class="nav nav-tabs" id="carTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="one-tab" data-toggle="tab" href="#one" role="tab"
+                                    aria-controls="one" aria-selected="false">Your Content</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="carTabContent">
+                            <div class="tab-pane fade active show" id="one" role="tabpanel" aria-labelledby="one-tab">
+                                <div class="car-description mb-50">
+                                    <h3 class="heading-2">
+                                        Description
+                                    </h3>
+                                    <p>{{single_post.full_desc | safe}}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="fb-comments" data-href="http://127.0.0.1:8000/community/{{single_post.id}}" data-width="" data-numposts="5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock content%}

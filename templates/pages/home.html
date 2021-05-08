@@ -68,7 +68,7 @@
                         <div class="tour-thumbnail">
                             <a href="{% url 'place_detail' place.id %}" class="tour-img">
                                 <div class="tag-2">Trending</div>
-                                <img class="d-block w-100" src="{{place.place_photo.url}}" alt="location-1">
+                                <img class="d-block w-100" src="{{place.place_photo.url}}" alt="Photo Unavailable">
                             </a>
                             <div class="placebox-overlap-wrapper">
                                 <div class="overlap-box">
@@ -98,7 +98,7 @@
                             </h1>
                             <div class="location">
                                 <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
-                                    <i class="flaticon-pin "></i>{{place.location}}
+                                    <i class="flaticon-pin "></i> {{place.location}}
                                 </a>
                             </div>
                             <ul class="facilities-list clearfix">
@@ -140,8 +140,8 @@
                 <div class="tour-box">
                     <div class="tour-thumbnail">
                         <a href="{% url 'place_detail' place.id %}" class="tour-img">
-                            <div class="tag">Latest</div>
-                            <img class="d-block w-100" src="{{place.place_photo.url}}" alt="location-0">
+                            <div class="tag">Recommended</div>
+                            <img class="d-block w-100" src="{{place.place_photo.url}}" alt="Photo Unavailable">
                             <div class="facilities-list clearfix">
                                 <ul>
                                     <li>
@@ -178,7 +178,7 @@
                         </h1>
                         <div class="location">
                             <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
-                                <i class="flaticon-pin"></i>{{place.location}}
+                                <i class="flaticon-pin"></i> {{place.location}}
                             </a>
                         </div>
                     </div>

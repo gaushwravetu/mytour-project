@@ -123,15 +123,12 @@
                         <h1 class="title">
                             <a href="{% url 'place_detail' place.id %}">{{place.place_title}}</a>
                         </h1>
-                        <div class="location">
-                            <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
-                                <i class="flaticon-pin"></i>{{place.location}}
-                            </a>
-                        </div>
                     </div>
                     <div class="footer clearfix">
                         <div class="pull-left ratings days">
-                            <p class="tourtype">{{place.one_strong_point_for_recommendations}}</p>
+                            <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
+                                <i class="flaticon-pin"></i><span> {{place.location}}</span>
+                            </a>
                         </div>
                     </div>
                 </div>
