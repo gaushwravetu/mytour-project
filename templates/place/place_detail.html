@@ -108,12 +108,16 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab"
-                                    aria-controls="three" aria-selected="false">Reasons to visit</a>
+                                    aria-controls="three" aria-selected="false">Reasons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="four-tab" data-toggle="tab" href="#four" role="tab"
+                                    aria-controls="four" aria-selected="false">Closeness</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="carTabContent">
                             <div class="tab-pane fade active show" id="one" role="tabpanel" aria-labelledby="one-tab">
-                                <div class="car-description mb-50">
+                                <div class="place-description mb-50">
                                     <h3 class="heading-2">
                                         Description
                                     </h3>
@@ -122,19 +126,27 @@
                             </div>
 
                             <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
-                                <div class="car-description mb-50">
+                                <div class="place-description mb-50">
                                     <h3 class="heading-2">
-                                        Top features
+                                        Top features of this place
                                     </h3>
                                     <p>{{single_place.Explain_each_feature | safe}}</p>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="three-tab">
-                                <div class="car-description mb-50">
+                                <div class="place-description mb-50">
                                     <h3 class="heading-2">
-                                        Top reasons
+                                        Reasons to visit
                                     </h3>
                                     <p>{{single_place.Reasons_to_visit | safe}}</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="four-tab">
+                                <div class="place-description mb-50">
+                                    <h3 class="heading-2">
+                                        Closeness of the destination
+                                    </h3>
+                                    <p>{{single_place.closeness_of_the_destination | safe}}</p>
                                 </div>
                             </div>
                         </div>
