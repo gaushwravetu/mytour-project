@@ -23,7 +23,7 @@
 	{% include 'includes/messages.html' %}
 	<div class="main-title" style="text-align:left !important;">
 		<h1>Welcome <span>{{user.first_name}}</span></h1>
-		<a href="{% url 'addpost' %}" class="btn btn-success">Add Post</a>
+		<a href="{% url 'addpost' %}" class="btn_item btn btn-success">Add Post</a>
 	</div>
 	<p>Here are the places that you have inquired about</p>
 	{% if inquiries %}
@@ -42,7 +42,7 @@
 				<td>{{inquiry.place_title}}</td>
 				<td>{{inquiry.customer_need}}</td>
 				<td>{{inquiry.city}}</td>
-				<td><a href="{% url 'place_detail' inquiry.place_id %}" class="btn btn-outline-success">View Place</a></td>
+				<td><a href="{% url 'place_detail' inquiry.place_id %}" class="btn_item btn btn-outline-success">View Place</a></td>
 			</tr>
 			{% endfor %}
 		</tbody>
@@ -67,11 +67,11 @@
 				<td>{{post.title}}</td>
 				<td>{{post.location}}</td>
 				<td>
-					<a href="{% url 'community_detail' post.id %}" class="btn btn-outline-success">View</a>
+					<a href="{% url 'community_detail' post.id %}" class="btn_item btn btn-outline-success">View</a>
 					{% comment %} <a href="{% url 'updatepost' post.id %}" class="btn btn-outline-warning">Edit<a> {% endcomment %}
 					<form action="{% url 'deletepost' post.id %}" method="POST" class="d-inline">
 					{% csrf_token %}
-					<input type="submit" class="btn btn-outline-danger" value="Delete">
+					<input type="submit" class="btn_item btn btn-outline-danger" value="Delete">
 					</form>
 				<td>
 			</tr>
