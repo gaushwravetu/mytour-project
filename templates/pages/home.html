@@ -7,7 +7,7 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner banner-slider-inner text-center">
             <div class="carousel-item banner-max-height active item-bg">
-                <img class="d-block w-100 h-100" src="{% static 'img/tour-1.jpg' %}" alt="banner">
+                <img class="d-block w-100 h-100" src="https://source.unsplash.com/1920x1080/?world" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
                     <h3>Wow Factor Standard</h3>
                     <h5>Allow us to guide you through the innovative stress<br>
@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
-                <img class="d-block w-100 h-100" src="{% static 'img/tour-2.jpg' %}" alt="banner">
+                <img class="d-block w-100 h-100" src="https://source.unsplash.com/1920x1080/?india" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
                     <h3>World's Oldest Civilisations</h3>
                     <h5>India is a mosaic of multicultural experiences<br>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
-                <img class="d-block w-100 h-100" src="{% static 'img/tour-3.jpg' %}" alt="banner">
+                <img class="d-block w-100 h-100" src="https://source.unsplash.com/1920x1080/?island" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
                     <h3>Trending Destinations</h3>
                     <h5>As 2020 winds to a close,<br>
@@ -62,7 +62,8 @@
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
             <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-                {% for place in trending_place %}
+                {% for place in places %}
+                {% if place.views > 6 %}
                 <div class="slick-slide-item">
                     <div class="tour-box-3">
                         <div class="tour-thumbnail">
@@ -95,6 +96,7 @@
                         <div class="detail">
                             <h1 class="title">
                                 <a href="{% url 'place_detail' place.id %}">{{place.place_title}}</a>
+                                <p>(<i class="fa fa-eye"></i><span> {{place.views}}</span> Views)</p>
                             </h1>
                             <div class="location">
                                 <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
@@ -106,11 +108,12 @@
                                 <li>{{place.feature2}}</li>
                                 <li>{{place.feature3}}</li>
                                 <li>{{place.feature4}}</li>
-                                <li>{{place.feature5}}</li>
+                                {% if place.feature5 %}<li>{{place.feature5}}</li>{% endif %}
                             </ul>
                         </div>
                     </div>
                 </div>
+                {% endif %}
                 {% endfor %}
             </div>
             <div class="slick-btn">

@@ -33,6 +33,7 @@
                                     <i class="flaticon-pin"></i><span>{{single_place.location}}</span>
                                 </a>
                             </h6>
+                            <i class="fa fa-eye"></i><span> {{single_place.views}}</span> Views
                         </div>
                         <div class="pull-right">
                             <h3><span>Max : {{single_place.Max_temperature}}℃</span></h3>
@@ -167,13 +168,13 @@
                         <h3 class="sidebar-title">Refine Your Search</h3>
                         <ul>
                             <li>
-                                <span>Architecture: </span>{{single_place.architecture}}
+                                <span>Type: </span>{{single_place.architecture}}
                             </li>
                             <li>
                                 <span>Visitors each year: </span>{{single_place.no_of_visitors}}
                             </li>
                             <li>
-                                <span>Sealevel: </span>{{single_place.sea_level}}
+                                <span>Sealevel: </span>{{single_place.sea_level}}m
                             </li>
                         </ul>
                     </div>

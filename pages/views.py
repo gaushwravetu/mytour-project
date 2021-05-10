@@ -7,9 +7,9 @@ from django.contrib import messages
 # Create your views here.
 def home(request):
     teams = Team.objects.all()
-    trending_place = Place.objects.order_by('-added_date').filter(is_trending=True)
+    places = Place.objects.all()
     recommended_place = Place.objects.order_by('-added_date').filter(is_recommended=True)
-    data = {'teams': teams, 'recommended_place':recommended_place, 'trending_place':trending_place}
+    data = {'teams': teams, 'recommended_place':recommended_place, 'places':places}
     return render(request,'pages/home.html',data)
 
 def about(request):

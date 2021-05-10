@@ -4,7 +4,7 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 # Create your views here.
 def place(request):
     places = Place.objects.order_by('-added_date')
-    paginator = Paginator(places,2)
+    paginator = Paginator(places,10)
     page = request.GET.get('page')
     paged_places = paginator.get_page(page)
     country_search = Place.objects.values_list('country',flat=True).distinct()
@@ -20,6 +20,8 @@ def place(request):
 
 def place_detail(request, id):
     single_place = get_object_or_404(Place,pk=id)
+    single_place.views = single_place.views + 1
+    single_place.save()
 
     data = {
         'single_place': single_place,

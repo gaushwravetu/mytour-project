@@ -46,16 +46,6 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="architecture">
-                                    <option disabled="disabled" selected="selected">Select Architecture</option>
-                                    {% for architecture in architecture_search %}
-                                    <option value="{{architecture}}">{{architecture}}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="form-group">
                                 <button class="btn_item btn btn-block button-theme btn-md">
                                     <i class="fa fa-search"></i>Find
                                 </button>
@@ -83,7 +73,8 @@
                 <div class="tour-box">
                     <div class="tour-thumbnail">
                         <a href="{% url 'place_detail' place.id %}" class="tour-img">
-                            <div class="tag">Latest</div>
+                            {% if place.is_recommended %}<div class="tag">RECOMMENDED</div>{% endif %}
+                            {% if place.views > 6 %}<div class="tag">TRENDING</div>{% endif %}
                             <img class="d-block w-100" src="{{place.place_photo.url}}" alt="location-0">
                             <div class="facilities-list clearfix">
                                 <ul>
