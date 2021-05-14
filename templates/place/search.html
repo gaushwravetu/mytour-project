@@ -74,7 +74,6 @@
                     <div class="tour-thumbnail">
                         <a href="{% url 'place_detail' place.id %}" class="tour-img">
                             {% if place.is_recommended %}<div class="tag">RECOMMENDED</div>{% endif %}
-                            {% if place.views > 6 %}<div class="tag">TRENDING</div>{% endif %}
                             <img class="d-block w-100" src="{{place.place_photo.url}}" alt="location-0">
                             <div class="facilities-list clearfix">
                                 <ul>

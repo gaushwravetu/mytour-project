@@ -62,8 +62,7 @@
         <!-- Slick slider area start -->
         <div class="slick-slider-area clearfix">
             <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
-                {% for place in places %}
-                {% if place.views > 6 %}
+                {% for place in top_records %}
                 <div class="slick-slide-item">
                     <div class="tour-box-3">
                         <div class="tour-thumbnail">
@@ -96,7 +95,7 @@
                         <div class="detail">
                             <h1 class="title">
                                 <a href="{% url 'place_detail' place.id %}">{{place.place_title}}</a>
-                                <p>(<i class="fa fa-eye"></i><span> {{place.views}}</span> Views)</p>
+                                <p>(<i class="fa fa-eye"></i><span> {{place.place_views}}</span> Views)</p>
                             </h1>
                             <div class="location">
                                 <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
@@ -113,7 +112,6 @@
                         </div>
                     </div>
                 </div>
-                {% endif %}
                 {% endfor %}
             </div>
             <div class="slick-btn">

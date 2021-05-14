@@ -27,7 +27,8 @@
                     <div class="col-lg-6 col-md-6" name='redirect'>
                         <div class="tour-box-3">
                             <div class="tour-thumbnail">
-                                <a href="{% url 'place_detail' place.id %}" class="tour-img">
+                                 <a href="{% url 'place_detail' place.id %}" class="tour-img">
+                                
                                     <div class="tag-2 bg-active"></div>
                                     <img class="d-block w-100" src="{{place.place_photo.url}}" alt="Place">
                                 </a>
@@ -74,12 +75,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="detail">
+                            <div class="detail" style="position:relative">
                                 <h1 class="title">
-                                    <a href="{% url 'place_detail' place.id %}">{{place.place_title}}</a>
+                                   <a href="{% url 'place_detail' place.id %}">{{place.place_title}}</a> 
                                 </h1>
                                 <div class="location">
-
                                     <a href="https://www.google.com/maps/place/{{place.location}}" target="_blank">
                                         <i class="flaticon-pin"></i>{{place.location}}
                                     </a>
@@ -89,9 +89,11 @@
                                     <li>{{place.feature2}}</li>
                                     <li>{{place.feature3}}</li>
                                     <li>{{place.feature4}}</li>
-                                    {% if place.feature5 %} <li>{{place.feature5}}</li>{% endif %}
-
                                 </ul>
+                                {% comment %} <form action="{% url 'place_detail' place.id %}" method="get">
+                                    <input type="hidden" name="place-id" value="{{place.id}}">
+                                    <center><button type="submit" class="btn_item btn btn-outline-success mt-3">View</button></center>
+                                </form> {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -112,7 +114,6 @@
                                 <a class="page-link"><i class="fa fa-angle-left"></i></a>
                             </li>
                             {% endif %}
-                            {% comment %} {% endcomment %}
                             {% for i in places.paginator.page_range  %}
                             {% if places.number == i %}
                             <li class="page-item"><a class="page-link active" href="#">{{i}}</a></li>
@@ -162,29 +163,24 @@
                                     {% endfor %}
                                 </select>
                             </div>
-                            <button class="btn_item btn btn-block button-theme btn-md">
-                                <i class="fa fa-search"></i> Search
-                            </button>
+                            {% comment %} <div class="form-group">
+                                <div class="range-slider">
+                                    <div data-min="-1" data-max="50" data-unit="℃" data-min-name="Max_temperature"
+                                        data-max-name="Max_temperature" class="range-slider-ui ui-slider"
+                                        aria-disabled="false"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div> {% endcomment %}
                     </div>
-                    </form>
+                    <button class="btn_item btn btn-block button-theme btn-md">
+                        <i class="fa fa-search"></i> Search
+                    </button>
                 </div>
-
-                <!-- Question start -->
-                <div class="widget question widget-3">
-                    <h5 class="sidebar-title">Follow us</h5>
-                    <div class="social-list clearfix">
-                        <ul>
-                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
-                            <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 <!-- Featured place end -->

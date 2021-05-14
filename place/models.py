@@ -19,7 +19,6 @@ class Place(models.Model):
     feature2 = models.CharField(max_length=100,default=' ')
     feature3 = models.CharField(max_length=100,default=' ')
     feature4 = models.CharField(max_length=100,default=' ')
-    feature5 = models.CharField(max_length=100,blank=True)
     Explain_each_feature = RichTextField(default=' ')
     Reasons_to_visit = RichTextField(default=' ')
     story1 = RichTextField(default=' ')
@@ -28,12 +27,16 @@ class Place(models.Model):
     story4 = RichTextField(default=' ')
     Max_temperature = models.CharField(max_length=100,default='')
     Min_temperature = models.CharField(max_length=100,default='')
-    sea_level = models.CharField(max_length=10000)
+    sea_level = models.CharField(max_length=10000,default='')
     no_of_visitors = models.CharField(max_length=1000000,default='Around x million')
     closeness_of_the_destination = RichTextField()
-    views = models.IntegerField(default=0)
     added_date = models.DateTimeField(default=datetime.now,blank=True)
+    place_views = models.IntegerField(default=1)
     
     def __str__(self):
         return self.place_title
+        
+    # def total_views(self):
+    #     return self.views.count()
+    
     
