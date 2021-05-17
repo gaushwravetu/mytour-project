@@ -60,6 +60,7 @@
                         <div class="card-body">
                             <h4 class="mb-2 text-truncate-line-2 "><a href="{% url 'community_detail' post.id %}"
                                     class="text-inherit">{{post.title}}</a></h4>
+                            <p>{% now "jS F Y" %}</p>
                             <!-- List -->
                             <ul class="mb-3 list-inline">
                                 <li class="list-inline-item">

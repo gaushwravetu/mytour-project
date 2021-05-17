@@ -8,6 +8,6 @@ class Post(models.Model):
     user_id = models.IntegerField(blank=True)
     location = models.CharField(max_length=100, default=' ')
     short_desc = models.CharField(max_length=255, default='In less than 250 words')
-    full_desc = models.TextField()
+    full_desc = RichTextField(default=' ')
     place_photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
     added_date = models.DateTimeField(default=datetime.now,blank=True)

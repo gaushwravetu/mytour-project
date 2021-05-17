@@ -23,6 +23,9 @@
     <link rel="stylesheet" type="text/css"  href="{% static 'css/lightbox.min.css' %}">
     <link rel="stylesheet" type="text/css"  href="{% static 'css/jnoty.css' %}">
 
+    <!-- Richtext-editor stylesheet -->
+    <link rel="stylesheet" href="/richtexteditor/rte_theme_default.css" />
+
     <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" type="text/css" id="style_sheet" href="{% static 'css/skins/red.css' %}">
@@ -39,6 +42,14 @@
 
     <script  src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0&appId=287751912971128&autoLogAppEvents=1" nonce="gj7Ynqa2"></script>
+
+    <!-- Scripts of tinymce texteditor -->
+    <script src="https://cdn.tiny.cloud/1/w71n0w2ouqhgm0030427elw8c42hs3koclo63idlg0vvc5n4/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
 </head>
 <body>
 <div class="page_loader"></div>
@@ -60,7 +71,6 @@
 </div>
 
 {% include 'includes/footer.html' %}
-
 <script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
 <script src="{% static 'js/popper.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>

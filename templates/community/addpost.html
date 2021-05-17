@@ -39,7 +39,7 @@
                         <div class="col-md-6 text-left">
                             <div class="form-group name">
                                 <input type="text" name="author" class="form-control" placeholder="Author"
-                                    {% if user.is_authenticated %} value="{{user.first_name}}" {% endif %} readonly>
+                                    {% if user.is_authenticated %} value="{{user.first_name}} {{user.last_name}}" {% endif %} readonly>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -55,14 +55,11 @@
                         <div class="col-md-6">
                             <div class="form-group name">
                                 <input type="text" name="short_desc" class="form-control"
-                                    placeholder="Write short description" required/>
+                                    placeholder="A short highlight of your blog" required/>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <div class="form-group message">
-                                <textarea class="form-control" name="full_desc"
-                                    placeholder="Write full description"></textarea>
-                            </div>
+                            <textarea id="mytextarea" placeholder="Write Full Description" name="full_desc"></textarea>
                         </div>
                         <input type="file" id="myFile" name="place_photo" required/>
                         <div class="col-md-12">
