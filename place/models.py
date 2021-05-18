@@ -31,7 +31,7 @@ class Place(models.Model):
     no_of_visitors = models.CharField(max_length=1000000,default='Around x million')
     closeness_of_the_destination = RichTextField()
     added_date = models.DateTimeField(default=datetime.now,blank=True)
-    place_views = models.IntegerField(default=1)
+    place_views = models.IntegerField(default=0)
     
     def __str__(self):
         return self.place_title

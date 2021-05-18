@@ -8,6 +8,10 @@ from django.contrib.auth.models import User
 from .forms import PostForm
 from django.utils.datastructures import MultiValueDictKeyError
 # Create your views here.
+
+def error_404_view(request,exception):
+    return render(request,'community/404.html')
+
 def community(request):
     post_page = Post.objects.order_by('-added_date')
     location_search = Post.objects.values_list('location',flat=True).distinct()
@@ -71,6 +75,23 @@ def add_post(request):
         short_desc=short_desc,full_desc=full_desc, place_photo=place_photo)
         post.save()
         messages.success(request,"Your post uploaded successfully")
+
+
+    #added for forms
+    # if request.method == "POST":
+    #     form = PostForm(request.POST)
+    #     if form.is_valid():
+    #         post = form.save(commit=False)
+    #         post.save()
+    #         form = PostForm()
+    #         messages.success(request,"Your post uploaded successfully")
+    #         return redirect('community/addpost.html')
+    # else:
+    #     form = PostForm()
+    # return render(request,'community/addpost.html',{'form':form})
+
+
+
     # if request.method == "POST":
     #     form = PostForm(request.POST)
     #     print(request.POST)

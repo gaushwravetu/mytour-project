@@ -49,11 +49,19 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.socialaccount',
     'ckeditor',
+    'ckeditor_uploader',
 
     # providers
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
 ]
+
+CKEDITOR_UPLOAD_PATH = '/media/'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar':'full'
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -141,7 +149,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'mytour/static'),
 ]
-
 # media settings added manually
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
