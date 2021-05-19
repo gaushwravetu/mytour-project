@@ -110,17 +110,10 @@ WSGI_APPLICATION = 'mytour.wsgi.application'
 # }
 
 # DATABASE = {'default': dj_database_url.config(default='postgres://postgres:mytour@123@localhost/mytour')}
+DATABASE_URL = 'postgres://postgres:mytour@123@localhost/mytour'
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mytour',
-        'USER': 'postgres',
-        'PASSWORD': 'mytour@123',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'default': dj_database_url.parse(DATABASE_URL)
     }
-}
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
