@@ -108,12 +108,13 @@ WSGI_APPLICATION = 'mytour.wsgi.application'
 #         'PASSWORD': 'mytour@123',
 #     }
 # }
-
-# DATABASE = {'default': dj_database_url.config(default='postgres://postgres:mytour@123@localhost/mytour')}
-DATABASE_URL = 'postgres://postgres:mytour@123@localhost/mytour'
-DATABASES = {
-        'default': dj_database_url.parse(DATABASE_URL)
-    }
+DEFAULT=dj_database_url.config(default='postgres://postgres:mytour@123@localhost/mytour')
+DATABASE = {'default': DEFAULT}
+print(DATABASE)
+#DATABASE_URL = 'postgres://postgres:mytour@123@localhost/mytour'
+#DATABASES = {
+#        'default': dj_database_url.parse(DATABASE_URL)
+#    }
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
