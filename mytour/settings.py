@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9)42))gh#1vgiun*=)sbt=zw^7l0!5*g+f5d&an!2dhu$a^u44'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -110,7 +110,7 @@ WSGI_APPLICATION = 'mytour.wsgi.application'
 # }
 DEFAULT=dj_database_url.config(default='postgres://postgres:mytour@123@localhost/mytour')
 DATABASE = {'default': DEFAULT}
-print(DATABASE)
+# print(DATABASE)
 #DATABASE_URL = 'postgres://postgres:mytour@123@localhost/mytour'
 #DATABASES = {
 #        'default': dj_database_url.parse(DATABASE_URL)
