@@ -4308,7 +4308,7 @@ footer {
 /** Counters start **/
 .counters {
     padding: 80px 0 50px;
-    background: url(../img/mytour-6.jpg);
+    background: url(../img/mytour-2.jpg);
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4348,7 +4348,7 @@ footer {
 /** Counters 2 start **/
 .counters-2 {
     padding: 100px 0 70px;
-    background: url(../img/mytour-7.jpg);
+    background: url(../img/mytour-2.jpg);
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4470,7 +4470,7 @@ footer {
 /** Testimonial 2 start **/
 .testimonial-2 {
     opacity: 1;
-    background: rgba(0, 0, 0, 0.04) url(../img/mytour-10.jpg) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(../img/mytour-2.jpg) top left repeat;
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4556,7 +4556,7 @@ footer {
 /** Testimonial 3 start **/
 .testimonial-3 {
     padding: 100px 0;
-    background: url(../img/mytour-10.jpg);
+    background: url(../img/mytour-2.jpg);
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -6175,7 +6175,7 @@ footer {
 
 /** Details banner start **/
 .details-banner{
-    background: rgba(0, 0, 0, 0.04) url(../img/mytour-11.jpg) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(../img/mytour-2.jpg) top left repeat;
     background-size: cover;
     height: 550px;
     background-position: center center;
