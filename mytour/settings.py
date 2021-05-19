@@ -108,8 +108,7 @@ WSGI_APPLICATION = 'mytour.wsgi.application'
 #         'PASSWORD': 'mytour@123',
 #     }
 # }
-DEFAULT=dj_database_url.config(default='postgres://postgres:mytour@123@localhost/mytour')
-DATABASE = {'default': DEFAULT}
+DATABASE = {'default': {'NAME': 'mytour', 'USER': 'postgres', 'PASSWORD': 'mytour@123', 'HOST': 'localhost', 'PORT': '', 'CONN_MAX_AGE': 0, 'ENGINE': 'django.db.backends.postgresql_psycopg2'}}
 # print(DATABASE)
 #DATABASE_URL = 'postgres://postgres:mytour@123@localhost/mytour'
 #DATABASES = {
