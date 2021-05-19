@@ -42,7 +42,7 @@ $(function () {
     $(document).on('click', '.compare-btn', function () {
         if($(this).hasClass('active')){
             $(this).removeClass('active');
-            $.jnoty("Car has been removed from compare list", {
+            $.jnoty("Place has been removed from compare list", {
                 header: 'Warning',
                 sticky: true,
                 theme: 'jnoty-warning',
@@ -51,7 +51,7 @@ $(function () {
 
         } else {
             $(this).addClass('active');
-            $.jnoty("Car has been added to compare list", {
+            $.jnoty("Place has been added to compare list", {
                 header: 'Success',
                 sticky: true,
                 theme: 'jnoty-success',
@@ -63,7 +63,7 @@ $(function () {
     $(document).on('click', '.wishlist-btn', function () {
         if($(this).hasClass('active')){
             $(this).removeClass('active');
-            $.jnoty("Car has been removed from wishlist list", {
+            $.jnoty("Place has been removed from wishlist list", {
                 header: 'Warning',
                 sticky: true,
                 theme: 'jnoty-warning',
@@ -72,7 +72,7 @@ $(function () {
 
         } else {
             $(this).addClass('active');
-            $.jnoty("Car has been added to wishlist list", {
+            $.jnoty("Place has been added to wishlist list", {
                 header: 'Success',
                 sticky: true,
                 theme: 'jnoty-success',
