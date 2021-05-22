@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import dj_database_url
 
+DATABASES['default'] =  dj_database_url.config()
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -24,7 +26,7 @@ SECRET_KEY = '9)42))gh#1vgiun*=)sbt=zw^7l0!5*g+f5d&an!2dhu$a^u44'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 LOGIN_REDIRECT_URL='dashboard'
 
@@ -112,7 +114,19 @@ WSGI_APPLICATION = 'mytour.wsgi.application'
 #DATABASES = {
 #        'default': dj_database_url.parse(DATABASE_URL)
 #    }
-DATABASE = {'default':dj_database_url.config(default='postgres://postgres:mytour@123@localhost/mytour')}
+# DATABASE = {'default':dj_database_url.config(default='postgres://postgres:mytour@123@localhost/mytour')}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'mytour',
+        'HOST': 'localhost',
+        'PORT': '',                    
+        'USER': 'postgres',
+        'PASSWORD': 'mytour@123',                             
+    }
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
