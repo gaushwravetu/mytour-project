@@ -26,7 +26,7 @@ SECRET_KEY = '9)42))gh#1vgiun*=)sbt=zw^7l0!5*g+f5d&an!2dhu$a^u44'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL='dashboard'
 
@@ -120,12 +120,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', 
         'NAME': 'mytour',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',                    
+        'HOST': 'localhost',
+        'PORT': '',                    
         'USER': 'postgres',
         'PASSWORD': 'mytour@123',                             
     }
 }
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
