@@ -26,7 +26,7 @@ SECRET_KEY = '9)42))gh#1vgiun*=)sbt=zw^7l0!5*g+f5d&an!2dhu$a^u44'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['serene-wildwood-20741.herokuapp.com']
 
 LOGIN_REDIRECT_URL='dashboard'
 
