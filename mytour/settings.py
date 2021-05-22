@@ -188,7 +188,7 @@ SITE_ID=6
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'gauravmyntra097@gmail.com'
-EMAIL_HOST_PASSWORD = 'Gaurav@123'
+EMAIL_HOST_PASSWORD = 'Gaurav@7597604205'
 EMAIL_USE_TLS = True
 
 # whitenoise settings
