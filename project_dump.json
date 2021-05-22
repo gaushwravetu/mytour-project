@@ -3266,6 +3266,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "1",
@@ -3283,6 +3284,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "1",
@@ -3300,6 +3302,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "2",
@@ -3317,6 +3320,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "3",
@@ -3334,6 +3338,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "4",
@@ -3351,6 +3356,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "5",
@@ -3368,6 +3374,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "4",
@@ -3385,6 +3392,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "5",
@@ -3402,6 +3410,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "6",
@@ -3419,6 +3428,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "6",
@@ -3436,6 +3446,7 @@
             "djangoadmin"
         ],
         "content_type": [
+            "place",
             "place"
         ],
         "object_id": "8",
