@@ -26,7 +26,7 @@ SECRET_KEY = '9)42))gh#1vgiun*=)sbt=zw^7l0!5*g+f5d&an!2dhu$a^u44'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['serene-wildwood-20741.herokuapp.com']
+ALLOWED_HOSTS = ['serene-wildwood-20741.herokuapp.com','localhost']
 
 LOGIN_REDIRECT_URL='dashboard'
 
@@ -123,7 +123,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '',                    
         'USER': 'postgres',
-        'PASSWORD': 'mytour@123',                             
+        'PASSWORD': '',                             
     }
 }
 
@@ -188,7 +188,7 @@ SITE_ID=6
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'gauravmyntra097@gmail.com'
-EMAIL_HOST_PASSWORD = 'Gaurav@7597604205'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 
 # whitenoise settings
