@@ -27,3 +27,5 @@ urlpatterns = [
     path('contacts/',include('contacts.urls')),
     path('ckeditor/',include('ckeditor_uploader.urls'))
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+handler404 = 'community.views.error_404_view'

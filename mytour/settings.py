@@ -9,13 +9,11 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
 import os
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -72,7 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
 ]
 
 ROOT_URLCONF = 'mytour.urls'
@@ -108,12 +106,13 @@ WSGI_APPLICATION = 'mytour.wsgi.application'
 #         'PASSWORD': 'mytour@123',
 #     }
 # }
-DATABASE = {'default': {'NAME': 'mytour', 'USER': 'postgres', 'PASSWORD': 'mytour@123', 'HOST': 'localhost', 'PORT': '', 'CONN_MAX_AGE': 0, 'ENGINE': 'django.db.backends.postgresql_psycopg2'}}
+# DATABASE = {'default': {'NAME': 'mytour', 'USER': 'postgres', 'PASSWORD': 'mytour@123', 'HOST': 'localhost', 'PORT': '', 'CONN_MAX_AGE': 0, 'ENGINE': 'django.db.backends.postgresql_psycopg2'}}
 # print(DATABASE)
 #DATABASE_URL = 'postgres://postgres:mytour@123@localhost/mytour'
 #DATABASES = {
 #        'default': dj_database_url.parse(DATABASE_URL)
 #    }
+DATABASE = {'default':dj_database_url.config(default='postgres://postgres:mytour@123@localhost/mytour')}
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -168,6 +167,7 @@ MESSAGE_TAGS = {
 SITE_ID=1
 
 # email settings added manually
+# EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'gauravmyntra097@gmail.com'
@@ -175,4 +175,4 @@ EMAIL_HOST_PASSWORD = 'Gaurav@123'
 EMAIL_USE_TLS = True
 
 # whitenoise settings
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
