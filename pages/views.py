@@ -13,7 +13,7 @@ def home(request):
                     )
     top_records = (Place.objects
                         .order_by('-place_views')
-                        .filter(place_views__in=top_place[:3]))
+                        .filter(place_views__in=top_place[:5]))
     recommended_place = Place.objects.order_by('-added_date').filter(is_recommended=True)
     data = {'teams': teams, 'recommended_place':recommended_place,'top_records':top_records}
     return render(request,'pages/home.html',data)

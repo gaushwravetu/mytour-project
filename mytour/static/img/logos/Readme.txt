@@ -5,7 +5,7 @@ Fonts used in this project:
 
 https://assets.onlinelogomaker.com/fonts/Adamcg-Pro.ttf
 https://assets.onlinelogomaker.com/fonts/Amerika Sans.ttf
-https://assets.onlinelogomaker.com/fonts/Diogenes.ttf
+https://assets.onlinelogomaker.com/fonts/Grand-Hotel-Regular.ttf
 
 
 Instructions to install fonts on windows: 

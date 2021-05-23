@@ -17,14 +17,52 @@
 </div>
 <!-- Sub Banner end -->
 
+<div class="search-box-3 sb-7 bg-active">
+    <div class="container">
+        <div class="search-area-inner">
+            <div class="search-contents">
+                <form method="" action="{% url 'search' %}">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-group">
+                                <select class="form-control search-fields" name="country">
+                                    <option disabled="disabled" selected="selected">Select Country</option>
+                                    {% for country in country_search %}
+                                    <option value="{{country}}">{{country}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-group">
+                                <select class="form-control search-fields" name="location">
+                                    <option disabled="disabled" selected="selected">Select Location</option>
+                                    {% for location in location_search %}
+                                    <option value="{{location}}">{{location}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                            <div class="form-group">
+                                <button class="btn_item btn btn-block button-theme btn-md">
+                                    <i class="fa fa-search"></i>Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Featured places start -->
 <div class="featured-place content-area">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-12">
                 <div class="row">
                     {% for place in places %}
-                    <div class="col-lg-6 col-md-6" name='redirect'>
+                    <div class="col-lg-4 col-md-4" name='redirect'>
                         <div class="tour-box-3">
                             <div class="tour-thumbnail">
                                  <a href="{% url 'place_detail' place.id %}" class="tour-img">
@@ -75,7 +113,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="detail" style="position:relative">
+                            <div class="detail">
                                 <h1 class="title">
                                    <a href="{% url 'place_detail' place.id %}">{{place.place_title}}</a> 
                                 </h1>
@@ -138,50 +176,9 @@
                     </nav>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="sidebar-right">
-                    <!-- Advanced search start -->
-                    <div class="widget advanced-search2">
-                        <h3 class="sidebar-title">Search your desire place</h3>
-                        <form action="{% url 'search' %}" method="">
-                            <div class="form-group">
-                                <input type="text" name="keyword" placeholder="Search by name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control search-fields" name="country">
-                                    <option selected="true" disabled="disabled">Select Country</option>
-                                    {% for country in country_search %}
-                                    <option value="{{country}}">{{country}}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control search-fields" name="location">
-                                    <option selected="true" disabled="disabled">Select Location</option>
-                                    {% for location in location_search %}
-                                    <option value="{{location}}">{{location}}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                            {% comment %} <div class="form-group">
-                                <div class="range-slider">
-                                    <div data-min="-1" data-max="50" data-unit="℃" data-min-name="Max_temperature"
-                                        data-max-name="Max_temperature" class="range-slider-ui ui-slider"
-                                        aria-disabled="false"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div> {% endcomment %}
-                    </div>
-                </div>
-                <button class="btn_item btn btn-block button-theme btn-md">
-                        <i class="fa fa-search"></i> Search
-                </button>
-                </form>
-            </div>
+            
         </div>
     </div>
-</div>
-</div>
 </div>
 <!-- Featured place end -->
 

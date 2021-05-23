@@ -26,8 +26,9 @@ SECRET_KEY = '9)42))gh#1vgiun*=)sbt=zw^7l0!5*g+f5d&an!2dhu$a^u44'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['serene-wildwood-20741.herokuapp.com','localhost']
-
+ALLOWED_HOSTS = ['serene-wildwood-20741.herokuapp.com','localhost','*']
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL='dashboard'
 
 
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'ckeditor',
     'ckeditor_uploader',
+    'social_django',
 
     # providers
     'allauth.socialaccount.providers.facebook',
@@ -72,7 +74,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', 
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'mytour.urls'
@@ -88,10 +91,20 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.github.GithubOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 WSGI_APPLICATION = 'mytour.wsgi.application'
 
@@ -181,7 +194,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
-SITE_ID=6
+SITE_ID=1
 
 # email settings added manually
 # EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
@@ -193,3 +206,7 @@ EMAIL_USE_TLS = True
 
 # whitenoise settings
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
+
+
+SOCIAL_AUTH_FACEBOOK_KEY = '287751912971128'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = 'de4465eb6b1df01b53520eda3066bb8d'  # App Secret
