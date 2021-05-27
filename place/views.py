@@ -7,7 +7,7 @@ from django.db.models import Q
 
 def place(request):
     places = Place.objects.order_by('-added_date')
-    paginator = Paginator(places,10)
+    paginator = Paginator(places,9)
     page = request.GET.get('page')
     paged_places = paginator.get_page(page)
     country_search = Place.objects.values_list('country',flat=True).distinct()
