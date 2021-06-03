@@ -181,7 +181,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
-SITE_ID=6
+SITE_ID=7
 
 # email settings added manually
 # EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
