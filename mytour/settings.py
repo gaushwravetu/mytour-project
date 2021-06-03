@@ -26,7 +26,7 @@ SECRET_KEY = '9)42))gh#1vgiun*=)sbt=zw^7l0!5*g+f5d&an!2dhu$a^u44'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['serene-wildwood-20741.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['travelwithsafari.herokuapp.com','localhost']
 LOGIN_REDIRECT_URL='dashboard'
 
 
@@ -181,7 +181,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
-SITE_ID=6
+SITE_ID=1
 
 # email settings added manually
 # EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
