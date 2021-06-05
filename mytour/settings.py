@@ -187,8 +187,8 @@ SITE_ID=7
 # EMAIL_BACKEND = 'django.core.mail.backend.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'gauravmyntra097@gmail.com'
-EMAIL_HOST_PASSWORD = 'Gaurav@7597604205'
+EMAIL_HOST_USER = 'travelwithsafari7@gmail.com'
+EMAIL_HOST_PASSWORD = 'ctsmqdvlxcybbiap'
 EMAIL_USE_TLS = True
 
 # whitenoise settings
