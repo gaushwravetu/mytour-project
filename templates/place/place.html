@@ -23,7 +23,7 @@
             <div class="search-contents">
                 <form method="" action="{% url 'search' %}">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="form-control search-fields" name="country">
                                     <option disabled="disabled" selected="selected">Select Country</option>
@@ -33,7 +33,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                        {% comment %} <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="form-control search-fields" name="location">
                                     <option disabled="disabled" selected="selected">Select Location</option>
@@ -42,7 +42,7 @@
                                     {% endfor %}
                                 </select>
                             </div>
-                        </div>
+                        </div> {% endcomment %}
                         <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <button class="btn_item btn btn-block button-theme btn-md">

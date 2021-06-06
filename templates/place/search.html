@@ -24,7 +24,7 @@
             <div class="search-contents">
                 <form method="GET">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="form-control search-fields" name="country">
                                     <option disabled="disabled" selected="selected">Select Country</option>
@@ -34,7 +34,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                        {% comment %} <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="form-control search-fields" name="location">
                                     <option disabled="disabled" selected="selected">Select Location</option>
@@ -43,7 +43,7 @@
                                     {% endfor %}
                                 </select>
                             </div>
-                        </div>
+                        </div> {% endcomment %}
                         <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <button class="btn_item btn btn-block button-theme btn-md">
@@ -65,7 +65,7 @@
         <!-- Main title -->
         <div class="main-title">
             <h1>Here's your <span>Places</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>“The world is a book and those who do not travel read only one page.” ~ Saint Augustine.</p>
         </div>
         <div class="row">
             {% for place in places %}
