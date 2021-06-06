@@ -62,15 +62,15 @@
                             <button type="submit" class="btn_item btn-md btn-theme float-left">Register</button>
                         </div>
                         <div class="extra-login clearfix">
-                            <span>Or Login With</span>
+                            <span>Or Register With</span>
                         </div>
                         <div class="clearfix"></div>
                         <ul class="social-list">
-                            <li><a href="{% url 'social:begin' 'facebook' %}" class="facebook-bg"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
+                            {% comment %} <li><a href="{% provider_login_url 'facebook' %}" class="facebook-bg"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li> {% endcomment %}
                             <li><a href="{% provider_login_url 'google'  %}" class="google-bg"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
                         </ul>
                     </form>
-                    <p>Already a member? <a href="{% url 'login' %}" class="thembo"><span>Login here</span></a></p>
+                    <p>Already a member? <a href="{% url 'login' %}" class="thembo"><span>Register here</span></a></p>
                 </div>
             </div>
         </div>
