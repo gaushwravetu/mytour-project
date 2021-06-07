@@ -81,8 +81,16 @@ def search(request):
     # search for keyword in places if not found then it will search inside description and show the results
     if 'keyword' in request.GET:
         keyword = request.GET['keyword']
-        if keyword:
-            places = places.filter(description__icontains=keyword)
+        if len(keyword) > 78:
+            places = Place.objects.none()
+        else:
+            places_desc = Place.objects.filter(description__icontains=keyword)
+            places_country = Place.objects.filter(country__icontains=keyword)
+            places_title = Place.objects.filter(place_title__icontains=keyword)
+            places_location = Place.objects.filter(location__icontains=keyword)
+            places_reasons = Place.objects.filter(Reasons_to_visit__icontains=keyword)
+            places_features = Place.objects.filter(Explain_each_feature__icontains=keyword)
+            places = places_desc.union(places_title,places_location,places_country,places_features,places_reasons)
     if 'country' in request.GET:
         country = request.GET['country']
         if country:

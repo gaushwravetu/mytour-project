@@ -24,14 +24,15 @@
             <div class="search-contents">
                 <form method="GET">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                        <div class="col-lg-8 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="location">
+                                {% comment %} <select class="selectpicker search-fields" name="location">
                                     <option disabled="disabled" selected="selected">Select Location</option>
                                     {% for location in location_search %}
                                     <option value="{{location}}">{{location}}</option>
                                     {% endfor %}
-                                </select>
+                                </select> {% endcomment %}
+                                <input type="text" name="keyword" placeholder="Search by name" class="form-control">
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
@@ -53,44 +54,58 @@
 <div class="featured-tour content-area">
     <div class="container">
         <!-- Main title -->
-        <div class="main-title">
-            <h1>Here's your <span>Blog Posts</span></h1>
-            <p>“Life is either a daring adventure or nothing at all” ~ Helen Keller</p>
-        </div>
-        <div class="row">
-            {% for post in posts %}
-            <div class="col-lg-4 col-md-6">
-                <div class="tour-box">
-                    <div class="tour-thumbnail">
-                        <a href="{% url 'community_detail' post.id %}" class="tour-img">
-                            <div class="tag">posted by {{post.author}}</div>
-                            <img class="card-img-top" src="{{post.place_photo.url}}" alt="Photo Unavailable">
-                            <div class="facilities-list clearfix">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.google.com/maps/place/{{post.location}}" target="_blank">
-                                            <i class="flaticon-pin"></i><span> {{post.location}}</span>
-                                        </a>
-                                    </li>
-                                </ul>
+        {% if posts|length < 1 %}
+            <div class="main-title">
+                <h1>No results found for <span>{{keyword}}</span></h1>
+                <ul>
+                    <li>
+                        It looks like there aren't many great matches for your search
+                    </li>
+                    <li>
+                        Try using words that might appear on the page that you’re looking for. For example, 'Amsterdam' instead of 'Amsterdam is a unique city'.
+                    </li>
+                </ul>
+            </div>
+        {% else %}
+            <div class="main-title">
+                <h1>Here's your search results for <span>{{keyword}}</span></h1>
+                <p>“Life is either a daring adventure or nothing at all” ~ Helen Keller</p>
+            </div>
+            <div class="row">
+                {% for post in posts %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="tour-box">
+                        <div class="tour-thumbnail">
+                            <a href="{% url 'community_detail' post.id %}" class="tour-img">
+                                <div class="tag">posted by {{post.author}}</div>
+                                <img class="card-img-top" src="{{post.place_photo.url}}" alt="Photo Unavailable">
+                                <div class="facilities-list clearfix">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.google.com/maps/place/{{post.location}}" target="_blank">
+                                                <i class="flaticon-pin"></i><span> {{post.location}}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <h1 class="title">
+                                {{post.title}}
+                            </h1>
+                            <p>
+                                {{post.short_desc}}<a href="{% url 'community_detail' post.id %}"><span>.....read more</span></a>
+                            </p>
+                            <div class="view-all">
+                                <a href="{% url 'community_detail' post.id %}" class="btn_item btn btn-outline-success">View Post</a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="detail">
-                        <h1 class="title">
-                            {{post.title}}
-                        </h1>
-                        <p>
-                            {{post.short_desc}}<a href="{% url 'community_detail' post.id %}"><span>.....read more</span></a>
-                        </p>
-                        <div class="view-all">
-                            <a href="{% url 'community_detail' post.id %}" class="btn_item btn btn-outline-success">View Post</a>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
+        {% endif %}
     </div>
 </div>
 <!-- Featured place end -->

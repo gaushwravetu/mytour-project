@@ -40,20 +40,30 @@ def community_detail(request, id):
     return render(request,'community/community_detail.html',data)
 
 def search_post(request):
-    posts = Post.objects.order_by('-added_date')
-    location_search = Post.objects.values_list('location',flat=True).distinct()
-    if 'keyword' in request.GET:
-        keyword = request.GET['keyword']
-        if keyword:
-            posts = posts.filter(full_desc__icontains=keyword)
+    # posts = Post.objects.order_by('-added_date')
+    # location_search = Post.objects.values_list('location',flat=True).distinct()
+    keyword = request.GET['keyword']
+    if len(keyword) > 78:
+        posts = Post.objects.none()
+    else:
+        posts_desc = Post.objects.filter(full_desc__icontains=keyword)
+        posts_sdesc = Post.objects.filter(short_desc__icontains=keyword)
+        posts_title = Post.objects.filter(title__icontains=keyword)
+        posts_location = Post.objects.filter(location__icontains=keyword)
+        posts = posts_desc.union(posts_title,posts_location,posts_sdesc)
+
+    # if 'keyword' in request.GET:
+    #     keyword = request.GET['keyword']
+    #     if keyword:
+    #         posts = posts.filter(full_desc__icontains=keyword)
             
-    if 'location' in request.GET:
-        location = request.GET['location']
-        if location:
-            posts = posts.filter(location__iexact=location)
+    # if 'location' in request.GET:
+    #     location = request.GET['location']
+    #     if location:
+    #         posts = posts.filter(location__iexact=location)
     data = {
         'posts':posts,
-        'location_search':location_search,
+        'keyword':keyword
     }
     return render(request,'community/searchpost.html',data)
 

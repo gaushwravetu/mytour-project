@@ -61,6 +61,19 @@
 
 <!-- Featured place start -->
 <div class="featured-tour content-area">
+    {% if places|length < 1 %}
+            <div class="main-title">
+                <h1>No results found for <span>Places</span></h1>
+                <ul>
+                    <li>
+                        It looks like there aren't many great matches for your search
+                    </li>
+                    <li>
+                        Try using words that might appear on the page that you’re looking for. For example, 'Wellington' instead of 'Wellington Cable Car and the Kelburn Lookout'.
+                    </li>
+                </ul>
+            </div>
+    {% else %}
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
@@ -126,6 +139,7 @@
             {% endfor %}
         </div>
     </div>
+    {% endif %}
 </div>
 <!-- Featured place end -->
 

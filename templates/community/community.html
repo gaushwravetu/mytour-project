@@ -98,14 +98,14 @@
                             <div class="form-group">
                                 <input type="text" name="keyword" placeholder="Search by name" class="form-control">
                             </div>
-                            <div class="form-group">
+                            {% comment %} <div class="form-group">
                                 <select class="form-control search-fields" name="location">
                                     <option selected="true" disabled="disabled">Select Location</option>
                                     {% for location in location_search %}
                                     <option value="{{location}}">{{location}}</option>
                                     {% endfor %}
                                 </select>
-                            </div>
+                            </div> {% endcomment %}
                             <button class="btn_item btn btn-block button-theme btn-md">
                                 <i class="fa fa-search"></i> Search
                             </button>
