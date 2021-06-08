@@ -25,8 +25,8 @@
 		<h1>Welcome <span>{{user.first_name}}</span></h1>
 		<a href="{% url 'addpost' %}" class="btn_item btn btn-success">Add Post</a>
 	</div>
-	<p>Here are the places that you have inquired about</p>
 	{% if inquiries %}
+	<p>Here are the places that you have inquired about</p>
 	<table class="table table-hover">
 		<thead>
 			<tr>
@@ -48,11 +48,11 @@
 		</tbody>
 	</table>
 	{% else %}
-	<h4>Your have no inquiries</h4>
+	<h4>You have no inquiries</h4>
+	<p>For any inquiries, you may visit inside our place section.</p>
 	{% endif %}
-
-	<p>Here are your blog posts</p>
 	{% if posts %}
+	<p>Here are your blog posts</p>
 	<table class="table table-hover">
 		<thead>
 			<tr>
@@ -80,6 +80,7 @@
 	</table>
 	{% else %}
 	<h4>No blog posts</h4>
+	<p>Click on Add Post button to post your experience which later available inside our Community Section.</p>
 	{% endif %}
 
 </div>
