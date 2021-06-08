@@ -132,6 +132,10 @@ ul {
     background: #a30618;
     color: #fff;
 }
+.rss-bg:hover {
+    background: #b66304!important;
+    color: #fff;
+}
 
 .delay-02s {
     animation-delay: 0.2s;
@@ -3329,6 +3333,10 @@ input[type=checkbox]:checked + label:before {
     background: #066e90!important;
 }
 
+.team-1 .rss-bg:hover {
+    background: #b66304!important;
+}
+
 .our-team-2{
     background: rgba(0, 0, 0, 0.04) url(../img/bg-img-6.jpg) top left repeat;
     background-size: cover;
@@ -3435,6 +3443,10 @@ input[type=checkbox]:checked + label:before {
 
 .team-1 .linkedin-bg:hover {
     background: #066e90!important;
+}
+
+.team-1 .rss-bg:hover {
+    background: #b66304!important;
 }
 
 /** pages 404 start **/
@@ -3925,6 +3937,10 @@ footer {
     background: #0177b5!important;
 }
 
+.footer .rss-bg:hover {
+    background: #b66304!important;
+}
+
 .footer .f-logo{
     margin-bottom: 0px;
     height: 50px;
@@ -4308,7 +4324,7 @@ footer {
 /** Counters start **/
 .counters {
     padding: 80px 0 50px;
-    background: url(../img/mytour-6.jpg);
+    background: url(../img/mytour-2.jpg);
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4348,7 +4364,7 @@ footer {
 /** Counters 2 start **/
 .counters-2 {
     padding: 100px 0 70px;
-    background: url(../img/mytour-7.jpg);
+    background: url(../img/mytour-2.jpg);
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4470,7 +4486,7 @@ footer {
 /** Testimonial 2 start **/
 .testimonial-2 {
     opacity: 1;
-    background: rgba(0, 0, 0, 0.04) url(../img/mytour-10.jpg) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(../img/mytour-2.jpg) top left repeat;
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4556,7 +4572,7 @@ footer {
 /** Testimonial 3 start **/
 .testimonial-3 {
     padding: 100px 0;
-    background: url(../img/mytour-10.jpg);
+    background: url(../img/mytour-2.jpg);
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -6175,7 +6191,7 @@ footer {
 
 /** Details banner start **/
 .details-banner{
-    background: rgba(0, 0, 0, 0.04) url(../img/mytour-11.jpg) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(../img/mytour-2.jpg) top left repeat;
     background-size: cover;
     height: 550px;
     background-position: center center;
