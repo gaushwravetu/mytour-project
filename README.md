@@ -23,4 +23,7 @@ Through this website our goal is to promote local arts, travelling agencies, hot
     <li>
           Created place section where any users can see top curated picks of places with all details and plan their tourism accordingly.
     </li>
+  <li>
+          Developed an interactive and fully responsive web-based application for worldwide tourists1.
+    </li>
   </ol>
